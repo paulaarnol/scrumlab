@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - SCRUM LAB</title>
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fuente Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Hoja de Estilos Compartida -->
+  <link rel="stylesheet" href="nosotros.css">
+</head>
+<body>
+
+  <!-- Canvas de partículas animadas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar fija -->
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Desplegable Megamenú -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-clipboard-question"></i> Encuestas</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Encuesta Metodológica</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTENIDO SOBRE NOSOTROS -->
+  <main class="page-container">
+    
+    <!-- Botón Volver -->
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <section class="main-panel panel-team">
+      <h2 class="panel-title">EQUIPO DE TRABAJO</h2>
+
+      <div class="team-grid">
+        
+        <!-- Integrante 1: Lara Haedo -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="profile-img-box">
+              <img src="imagenes/lara.jpeg" alt="Lara Haedo" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="placeholder-avatar"><i class="fa-solid fa-image"></i></div>
+            </div>
+            <div class="profile-info">
+              <span class="role">Scrum Master</span>
+              <h3 class="name">Lara Haedo</h3>
+              <p class="description">Encargada de organizar el trabajo del equipo, coordinar las tareas y acompañar el desarrollo del proyecto.</p>
+            </div>
+          </div>
+          <div class="team-card-details">
+            <div class="detail-block">
+              <strong>Motivación:</strong>
+              <p>Promover la innovación y el trabajo colaborativo en equipo.</p>
+            </div>
+            <div class="detail-block">
+              <strong>E-mail:</strong>
+              <p> scrummasterscrumlab@gmail.com</p>
+            </div>
+            <div class="detail-block">
+              <strong>Institución:</strong>
+              <p>E.P.E.T N°20</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrante 2: Sofía Gomez -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="profile-img-box">
+              <img src="imagenes/sofi.jpeg" alt="Sofía Gomez" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="placeholder-avatar"><i class="fa-solid fa-image"></i></div>
+            </div>
+            <div class="profile-info">
+              <span class="role">Diseñadora</span>
+              <h3 class="name">Sofía Gomez</h3>
+              <p class="description">Encargada de definir la estética y organización visual del sitio, buscando que sea claro, atractivo y fácil de recorrer.</p>
+            </div>
+          </div>
+          <div class="team-card-details">
+            <div class="detail-block">
+              <strong>Motivación:</strong>
+              <p>Crear interfaces intuitivas e innovadoras que faciliten el aprendizaje.</p>
+            </div>
+            <div class="detail-block">
+              <strong>E-mail:</strong>
+              <p> diseñadorascrumlab@gmail.com</p>
+            </div>
+            <div class="detail-block">
+              <strong>Institución:</strong>
+              <p>E.P.E.T N°20</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrante 3: Candelaria Salgado -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="profile-img-box">
+              <img src="imagenes/cande.jpeg" alt="Candelaria Salgado" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="placeholder-avatar"><i class="fa-solid fa-image"></i></div>
+            </div>
+            <div class="profile-info">
+              <span class="role">Tester</span>
+              <h3 class="name">Candelaria Salgado</h3>
+              <p class="description">Encargada de comprobar el funcionamiento del sitio, detectar errores y verificar que cada sección cumpla con lo solicitado.</p>
+            </div>
+          </div>
+          <div class="team-card-details">
+            <div class="detail-block">
+              <strong>Motivación:</strong>
+              <p>Asegurar los estándares de máxima calidad y óptimo funcionamiento.</p>
+            </div>
+            <div class="detail-block">
+              <strong>E-mail:</strong>
+              <p> testerscrumlab@gmail.com</p>
+            </div>
+            <div class="detail-block">
+              <strong>Institución:</strong>
+              <p>E.P.E.T N°20</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrante 4: Paula Arnol -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="profile-img-box">
+              <img src="imagenes/paula.jpeg" alt="Paula Arnol" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="placeholder-avatar"><i class="fa-solid fa-image"></i></div>
+            </div>
+            <div class="profile-info">
+              <span class="role">Programadora</span>
+              <h3 class="name">Paula Arnol</h3>
+              <p class="description">Encargada de llevar el diseño a código y desarrollar las funcionalidades necesarias para que el sitio sea interactivo.</p>
+            </div>
+          </div>
+          <div class="team-card-details">
+            <div class="detail-block">
+              <strong>Motivación:</strong>
+              <p>Construir software de impacto combinando lógica y diseño de calidad.</p>
+            </div>
+            <div class="detail-block">
+              <strong>E-mail:</strong>
+              <p> programadorascrumlab@gmail.com</p>
+            </div>
+            <div class="detail-block">
+              <strong>Institución:</strong>
+              <p>E.P.E.T N°20</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer-banner">
+    <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
+    <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="nosotros.js"></script>
+</body>
+</html>

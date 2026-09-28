@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Calidad del Software - SCRUM LAB</title>
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fuente Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="gestion.css">
+</head>
+<body>
+
+  <!-- Canvas de partículas animadas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar fija -->
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Desplegable Megamenú -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-clipboard-question"></i> Encuestas</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Encuesta Metodológica</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-container">
+    
+    <!-- Botón Volver -->
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <!-- BANNER HERO -->
+    <section class="light-card hero-card">
+      <h1>GESTIÓN DE CALIDAD DEL SOFTWARE</h1>
+      <p>Comprendé los conceptos fundamentales de la calidad del software, las métricas utilizadas para evaluarla y los principales estándares relacionados.</p>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <div class="section-text-block">
+      <h2>¿Qué es la calidad del software?</h2>
+      <p>La calidad del software permite evaluar si un producto cumple con los requisitos establecidos y si responde de manera adecuada a las necesidades de sus usuarios.</p>
+    </div>
+
+    <!-- CONCEPTOS CLAVES (3 TARJETAS BLANCAS) -->
+    <section class="section-wrapper">
+      <h3 class="group-title">CONCEPTOS CLAVES</h3>
+      <div class="cards-trio">
+        <div class="light-card concept-card">
+          <h4>CALIDAD</h4>
+          <p>Grado en que un producto de software cumple con los requisitos y características esperadas.</p>
+        </div>
+
+        <div class="light-card concept-card">
+          <h4>MÉTRICA</h4>
+          <p>Medida utilizada para evaluar diferentes aspectos de un producto o proceso de software.</p>
+        </div>
+
+        <div class="light-card concept-card">
+          <h4>ESTÁNDAR</h4>
+          <p>Conjunto de criterios o normas que sirven como referencia para evaluar o desarrollar software.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTRICAS DE CALIDAD -->
+    <section class="light-card wide-card">
+      <h3>MÉTRICAS DE CALIDAD</h3>
+      <p class="card-intro">Las métricas permiten obtener medidas sobre diferentes características del software y ayudan a evaluar su calidad de manera más objetiva.</p>
+      
+      <ul class="bullet-list">
+        <li><strong>Funcionalidad:</strong> Que el software cumpla correctamente con las funciones para las que fue creado.</li>
+        <li><strong>Fiabilidad:</strong> Capacidad de funcionar correctamente y de manera estable, sin fallos frecuentes.</li>
+        <li><strong>Usabilidad:</strong> Facilidad con la que el usuario puede aprender y utilizar el software.</li>
+        <li><strong>Eficiencia:</strong> Capacidad de realizar sus funciones aprovechando adecuadamente los recursos disponibles.</li>
+        <li><strong>Mantenibilidad:</strong> Facilidad para corregir, actualizar o modificar el software cuando sea necesario.</li>
+        <li><strong>Portabilidad:</strong> Capacidad de funcionar en diferentes sistemas, plataformas o entornos.</li>
+      </ul>
+    </section>
+
+    <!-- ESTÁNDARES DE CALIDAD -->
+    <section class="light-card wide-card center-content">
+      <h3>ESTÁNDARES DE CALIDAD</h3>
+      <div class="buttons-row">
+        <button class="iso-btn active" id="btnIso9126">ISO 9126</button>
+        <button class="iso-btn" id="btnIso25000">ISO 25000</button>
+      </div>
+    </section>
+
+    <!-- CONTENIDO DINÁMICO ESTÁNDARES -->
+    <section class="light-card wide-card iso-display-card" id="isoDisplayCard">
+      <h3 id="isoTitle">ISO 9126 / ISO 25000</h3>
+      <div id="isoContent">
+        <p><strong>ISO 9126:</strong> Define la calidad a través de 6 características principales (Funcionalidad, Fiabilidad, Usabilidad, Eficiencia, Mantenibilidad y Portabilidad).</p>
+      </div>
+    </section>
+
+    <!-- TÉCNICAS DE ASEGURAMIENTO -->
+    <div class="section-text-block green-heading" id="aseguramiento">
+      <h2>TÉCNICAS DE ASEGURAMIENTO DE LA CALIDAD</h2>
+      <p>Las pruebas de software permiten comprobar el funcionamiento de un sistema, detectar errores y verificar que cumpla con los requisitos establecidos.</p>
+    </div>
+
+    <!-- NIVELES DE PRUEBAS CON TARJETAS GIRATORIAS (FLIP CARDS) -->
+    <section class="section-wrapper">
+      <h3 class="group-title">NIVELES DE PRUEBAS</h3>
+      <p class="section-subtext">Las pruebas pueden realizarse en diferentes niveles, dependiendo de la parte del software que se quiera evaluar. Pasa el cursor o toca una tarjeta para ver más información.</p>
+
+      <div class="light-card inner-dark-grid">
+        
+        <!-- Tarjeta 01 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- CARA FRONTAL -->
+            <div class="flip-card-front dark-box">
+              <h5>01 | PRUEBAS UNITARIAS</h5>
+              <p>Se comprueban componentes individuales del software para verificar que funcionen correctamente de manera aislada.</p>
+              <div class="objective2">
+                <strong>• Objetivo:</strong>
+                <span>Comprobar el funcionamiento de cada componente.</span>
+              </div>
+            </div>
+            <!-- CARA TRASERA -->
+            <div class="flip-card-back dark-box">
+              <h5>01 | MÁS INFORMACIÓN</h5>
+              <ul class="flip-detail-list">
+                <li><strong>Ejecutado por:</strong> Desarrolladores.</li>
+                <li><strong>Técnicas:</strong> Mocks, Stubs, Assertions.</li>
+                <li><strong>Herramientas:</strong> JUnit, PyTest, Jest, NUnit.</li>
+                <li><strong>Momento:</strong> Fase de codificación temprana.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 02 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- CARA FRONTAL -->
+            <div class="flip-card-front dark-box">
+              <h5>02 | PRUEBAS DE INTEGRACIÓN</h5>
+              <p>Se verifica la interacción entre diferentes componentes del software para comprobar que funcionen correctamente en conjunto.</p>
+              <div class="objective">
+                <strong>• Objetivo:</strong>
+                <span>Detectar problemas en la comunicación entre componentes.</span>
+              </div>
+            </div>
+            <!-- CARA TRASERA -->
+            <div class="flip-card-back dark-box">
+              <h5>02 | MÁS INFORMACIÓN</h5>
+              <ul class="flip-detail-list">
+                <li><strong>Ejecutado por:</strong> Desarrolladores o QA.</li>
+                <li><strong>Enfoques:</strong> Top-Down, Bottom-Up, Big Bang.</li>
+                <li><strong>Herramientas:</strong> Postman, RestAssured, SoapUI.</li>
+                <li><strong>Foco:</strong> Interfaces y contratos de datos.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 03 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- CARA FRONTAL -->
+            <div class="flip-card-front dark-box">
+              <h5>03 | PRUEBAS DE SISTEMA</h5>
+              <p>Se evalúa el sistema completo para comprobar que funcione correctamente y cumpla con los requisitos establecidos.</p>
+              <div class="objective2">
+                <strong>• Objetivo:</strong>
+                <span>Comprobar el funcionamiento general del sistema.</span>
+              </div>
+            </div>
+            <!-- CARA TRASERA -->
+            <div class="flip-card-back dark-box">
+              <h5>03 | MÁS INFORMACIÓN</h5>
+              <ul class="flip-detail-list">
+                <li><strong>Ejecutado por:</strong> Equipo de QA independiente.</li>
+                <li><strong>Tipos:</strong> Funcionales, Rendimiento, Seguridad.</li>
+                <li><strong>Herramientas:</strong> Selenium, Cypress, JMeter.</li>
+                <li><strong>Entorno:</strong> Staging / Pre-producción.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIPOS DE PRUEBAS (CAJA NEGRA Y BLANCA) -->
+    <section class="section-wrapper">
+      <h3 class="group-title">TIPOS DE PRUEBAS</h3>
+      <p class="section-subtext">Además de los niveles, las pruebas pueden clasificarse según la forma en que se analiza el software.</p>
+
+      <div class="green-cards-duo">
+        <div class="green-card">
+          <h4>CAJA NEGRA</h4>
+          <p>Evalúa el comportamiento del software a partir de las entradas y los resultados obtenidos, sin centrarse en su funcionamiento interno.</p>
+          <button class="ver-mas-btn" id="btnCajaNegra">Ver más</button>
+        </div>
+
+        <div class="green-card">
+          <h4>CAJA BLANCA</h4>
+          <p>Analiza el funcionamiento interno del software, teniendo en cuenta su lógica y estructura.</p>
+          <button class="ver-mas-btn" id="btnCajaBlanca">Ver más</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL / TARJETA DESPLEGABLE DE DETALLES -->
+  <div class="modal" id="infoModal">
+    <div class="modal-content light-card">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h3 id="modalTitle">Detalle de Prueba</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer-banner">
+    <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
+    <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="gestion.js"></script>
+</body>
+</html>

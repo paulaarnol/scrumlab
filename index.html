@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCRUM LAB - Innovación Ágil</title>
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fuente Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Canvas de partículas animadas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar fija -->
+  <header class="navbar">
+    <div class="logo-mini">
+      <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+    </div>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Desplegable Megamenú -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-clipboard-question"></i> Encuestas</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Encuesta Metodológica</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PANTALLA PRINCIPAL -->
+  <main class="main-container">
+    
+    <!-- ENCABEZADO SUPERIOR / HERO -->
+    <section class="hero-section">
+      <div class="main-logo-wrapper">
+        <img src="imagenes/logoprincipal.png" alt="Logo Principal Scrum Lab" class="main-logo-img">
+      </div>
+      <p class="subtitle">Conocé los conceptos, procesos y metodologías que permiten desarrollar software de calidad.</p>
+    </section>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <h2 class="sections-title">EXPLORÁ TODAS LAS SECCIONES</h2>
+
+    <!-- GRID DE TARJETAS ESTILO DESTACADOS -->
+    <div class="sections-grid">
+      
+      <!-- Fila 1 - Tarjeta 1: Metodologías ágiles -->
+      <div class="card highlight-style">
+        <div class="card-header">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Metodologías ágiles</h3>
+        </div>
+        <ul class="card-list">
+          <li>Scrum</li>
+          <li>Kanban</li>
+        </ul>
+      </div>
+
+      <!-- Fila 1 - Tarjeta 2: Procesos de desarrollo -->
+      <div class="card highlight-style">
+        <div class="card-header">
+          <i class="fa-solid fa-diagram-project"></i>
+          <h3>Procesos de desarrollo</h3>
+        </div>
+        <ul class="card-list">
+          <li>Ciclo de Vida del Software</li>
+          <li>Modelos Tradicionales</li>
+          <li>Metodologías Ágiles</li>
+        </ul>
+      </div>
+
+      <!-- Fila 1 - Tarjeta 3: Sistema de gestión de calidad -->
+      <a href="gestion.html" class="card-link">
+        <div class="card highlight-style">
+          <div class="card-header">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Sistema de gestión de calidad</h3>
+          </div>
+          <ul class="card-list">
+            <li>Fundamentos</li>
+            <li>Técnicas de Aseguramiento</li>
+            <li>Herramientas de Calidad</li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Fila 2 - Tarjeta 1: Recursos y aprendizaje -->
+      <div class="card highlight-style">
+        <div class="card-header">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>Recursos y aprendizaje</h3>
+        </div>
+        <ul class="card-list">
+          <li>Glosario</li>
+          <li>Preguntas Frecuentes</li>
+          <li>Enlaces de Interés</li>
+          <li>Ejercicios y Casos Prácticos</li>
+        </ul>
+      </div>
+
+      <!-- Fila 2 - Tarjeta 2: Encuesta de preferencias -->
+      <div class="card highlight-style">
+        <div class="card-header">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <h3>Encuesta de preferencias metodológicas</h3>
+        </div>
+        <p class="card-desc">Respondé algunas preguntas y obtené una sugerencia según las características de un proyecto.</p>
+      </div>
+
+      <!-- Fila 2 - Tarjeta 3: Comparador de metodologías -->
+      <div class="card highlight-style">
+        <div class="card-header">
+          <i class="fa-solid fa-list-check"></i>
+          <h3>Comparador de metodologías</h3>
+        </div>
+        <p class="card-desc">Compará las características de distintas metodologías.</p>
+      </div>
+
+      <!-- Fila 3 - Tarjeta Ancha: Sobre nosotros -->
+      <a href="nosotros.html" class="card-link full-width">
+        <div class="card highlight-style horizontal-card">
+          <div class="card-header-horizontal">
+            <i class="fa-solid fa-users"></i>
+            <h3>Sobre nosotros</h3>
+          </div>
+          <div class="divider-vertical"></div>
+          <ul class="card-list inline-list">
+            <li>Nuestro equipo</li>
+            <li>Contactos</li>
+          </ul>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer-banner">
+    <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
+    <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
