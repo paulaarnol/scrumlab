@@ -1,6 +1,4 @@
-// ==========================================
-// 1. ANIMACIÓN DE PARTÍCULAS EN CANVAS
-// ==========================================
+
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -85,19 +83,15 @@ function animateParticles() {
 initParticles();
 animateParticles();
 
-// ==========================================
-// 2. INTERACTIVIDAD DEL MENÚ
-// ==========================================
+
 const menuBtn = document.getElementById('menuBtn');
 const megaMenu = document.getElementById('megaMenu');
 
-// Abrir / Cerrar Menú Megamenú
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('active');
   megaMenu.classList.toggle('open');
 });
 
-// Cerrar al hacer clic fuera
 document.addEventListener('click', (e) => {
   if (!megaMenu.contains(e.target) && !menuBtn.contains(e.target) && megaMenu.classList.contains('open')) {
     menuBtn.classList.remove('active');

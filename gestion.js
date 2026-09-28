@@ -1,6 +1,4 @@
-// ==========================================
-// 1. ANIMACIÓN DE PARTÍCULAS EN CANVAS
-// ==========================================
+
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas ? canvas.getContext('2d') : null;
 
@@ -86,21 +84,16 @@ if (canvas) {
   animateParticles();
 }
 
-// ==========================================
-// ==========================================
-// INTERACTIVIDAD Y CIERRE DEL MEGAMENÚ
-// ==========================================
+
 const menuBtn = document.getElementById('menuBtn');
 const megaMenu = document.getElementById('megaMenu');
 
 if (menuBtn && megaMenu) {
-  // Abrir / Cerrar menú
   menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('active');
     megaMenu.classList.toggle('open');
   });
 
-  // Cerrar el menú si se hace clic fuera de él
   document.addEventListener('click', (e) => {
     if (!megaMenu.contains(e.target) && !menuBtn.contains(e.target) && megaMenu.classList.contains('open')) {
       menuBtn.classList.remove('active');
@@ -108,7 +101,6 @@ if (menuBtn && megaMenu) {
     }
   });
 
-  // Cerrar el menú automáticamente al hacer clic en cualquier enlace interno (#)
   const menuLinks = megaMenu.querySelectorAll('a');
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -118,9 +110,7 @@ if (menuBtn && megaMenu) {
   });
 }
 
-// ==========================================
-// 3. SELECCIÓN DE ESTÁNDARES (ISO 9126 / 25000)
-// ==========================================
+
 const btnIso9126 = document.getElementById('btnIso9126');
 const btnIso25000 = document.getElementById('btnIso25000');
 const isoTitle = document.getElementById('isoTitle');
@@ -153,9 +143,7 @@ if (btnIso9126 && btnIso25000) {
   });
 }
 
-// ==========================================
-// 4. DESPLEGABLE CON GRÁFICOS (CAJA NEGRA / BLANCA)
-// ==========================================
+
 const btnCajaNegra = document.getElementById('btnCajaNegra');
 const btnCajaBlanca = document.getElementById('btnCajaBlanca');
 const infoModal = document.getElementById('infoModal');
@@ -163,7 +151,6 @@ const closeModal = document.getElementById('closeModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
 
-// Diagrama SVG Caja Negra
 const svgCajaNegra = `
   <div class="graphic-container">
     <svg class="graphic-svg" viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +176,6 @@ const svgCajaNegra = `
   </div>
 `;
 
-// Diagrama SVG Caja Blanca
 const svgCajaBlanca = `
   <div class="graphic-container">
     <svg class="graphic-svg" viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
@@ -268,9 +254,7 @@ window.addEventListener('click', (e) => {
     infoModal.style.display = 'none';
   }
 });
-// ==========================================
-// 5. INTERACCION TOUCH/CLICK PARA TARJETAS GIRATORIAS
-// ==========================================
+
 const flipCards = document.querySelectorAll('.flip-card');
 
 flipCards.forEach(card => {

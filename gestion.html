@@ -4,19 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestión de Calidad del Software - SCRUM LAB</title>
-  <!-- Iconos FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Fuente Google -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Hoja de Estilos -->
   <link rel="stylesheet" href="gestion.css">
 </head>
 <body>
 
-  <!-- Canvas de partículas animadas -->
   <canvas id="particles-canvas"></canvas>
 
-  <!-- Navbar fija -->
   <header class="navbar">
     <a href="index.html" class="logo-mini-link">
       <div class="logo-mini">
@@ -30,7 +25,6 @@
     </button>
   </header>
 
-  <!-- Desplegable Megamenú -->
   <div class="mega-menu" id="megaMenu">
     <div class="mega-menu-content">
       <div class="menu-col">
@@ -86,25 +80,20 @@
     </div>
   </div>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main class="page-container">
     
-    <!-- Botón Volver -->
     <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
 
-    <!-- BANNER HERO -->
     <section class="light-card hero-card">
       <h1>GESTIÓN DE CALIDAD DEL SOFTWARE</h1>
       <p>Comprendé los conceptos fundamentales de la calidad del software, las métricas utilizadas para evaluarla y los principales estándares relacionados.</p>
     </section>
 
-    <!-- INTRODUCCIÓN -->
     <div class="section-text-block">
       <h2>¿Qué es la calidad del software?</h2>
       <p>La calidad del software permite evaluar si un producto cumple con los requisitos establecidos y si responde de manera adecuada a las necesidades de sus usuarios.</p>
     </div>
 
-    <!-- CONCEPTOS CLAVES (3 TARJETAS BLANCAS) -->
     <section class="section-wrapper">
       <h3 class="group-title">CONCEPTOS CLAVES</h3>
       <div class="cards-trio">
@@ -125,7 +114,6 @@
       </div>
     </section>
 
-    <!-- MÉTRICAS DE CALIDAD -->
     <section class="light-card wide-card">
       <h3>MÉTRICAS DE CALIDAD</h3>
       <p class="card-intro">Las métricas permiten obtener medidas sobre diferentes características del software y ayudan a evaluar su calidad de manera más objetiva.</p>
@@ -140,7 +128,6 @@
       </ul>
     </section>
 
-    <!-- ESTÁNDARES DE CALIDAD -->
     <section class="light-card wide-card center-content">
       <h3>ESTÁNDARES DE CALIDAD</h3>
       <div class="buttons-row">
@@ -149,7 +136,6 @@
       </div>
     </section>
 
-    <!-- CONTENIDO DINÁMICO ESTÁNDARES -->
     <section class="light-card wide-card iso-display-card" id="isoDisplayCard">
       <h3 id="isoTitle">ISO 9126 / ISO 25000</h3>
       <div id="isoContent">
@@ -157,23 +143,19 @@
       </div>
     </section>
 
-    <!-- TÉCNICAS DE ASEGURAMIENTO -->
     <div class="section-text-block green-heading" id="aseguramiento">
       <h2>TÉCNICAS DE ASEGURAMIENTO DE LA CALIDAD</h2>
       <p>Las pruebas de software permiten comprobar el funcionamiento de un sistema, detectar errores y verificar que cumpla con los requisitos establecidos.</p>
     </div>
 
-    <!-- NIVELES DE PRUEBAS CON TARJETAS GIRATORIAS (FLIP CARDS) -->
     <section class="section-wrapper">
       <h3 class="group-title">NIVELES DE PRUEBAS</h3>
       <p class="section-subtext">Las pruebas pueden realizarse en diferentes niveles, dependiendo de la parte del software que se quiera evaluar. Pasa el cursor o toca una tarjeta para ver más información.</p>
 
       <div class="light-card inner-dark-grid">
         
-        <!-- Tarjeta 01 -->
         <div class="flip-card">
           <div class="flip-card-inner">
-            <!-- CARA FRONTAL -->
             <div class="flip-card-front dark-box">
               <h5>01 | PRUEBAS UNITARIAS</h5>
               <p>Se comprueban componentes individuales del software para verificar que funcionen correctamente de manera aislada.</p>
@@ -182,7 +164,6 @@
                 <span>Comprobar el funcionamiento de cada componente.</span>
               </div>
             </div>
-            <!-- CARA TRASERA -->
             <div class="flip-card-back dark-box">
               <h5>01 | MÁS INFORMACIÓN</h5>
               <ul class="flip-detail-list">
@@ -195,10 +176,8 @@
           </div>
         </div>
 
-        <!-- Tarjeta 02 -->
         <div class="flip-card">
           <div class="flip-card-inner">
-            <!-- CARA FRONTAL -->
             <div class="flip-card-front dark-box">
               <h5>02 | PRUEBAS DE INTEGRACIÓN</h5>
               <p>Se verifica la interacción entre diferentes componentes del software para comprobar que funcionen correctamente en conjunto.</p>
@@ -207,7 +186,6 @@
                 <span>Detectar problemas en la comunicación entre componentes.</span>
               </div>
             </div>
-            <!-- CARA TRASERA -->
             <div class="flip-card-back dark-box">
               <h5>02 | MÁS INFORMACIÓN</h5>
               <ul class="flip-detail-list">
@@ -220,10 +198,8 @@
           </div>
         </div>
 
-        <!-- Tarjeta 03 -->
         <div class="flip-card">
           <div class="flip-card-inner">
-            <!-- CARA FRONTAL -->
             <div class="flip-card-front dark-box">
               <h5>03 | PRUEBAS DE SISTEMA</h5>
               <p>Se evalúa el sistema completo para comprobar que funcione correctamente y cumpla con los requisitos establecidos.</p>
@@ -232,7 +208,6 @@
                 <span>Comprobar el funcionamiento general del sistema.</span>
               </div>
             </div>
-            <!-- CARA TRASERA -->
             <div class="flip-card-back dark-box">
               <h5>03 | MÁS INFORMACIÓN</h5>
               <ul class="flip-detail-list">
@@ -248,7 +223,6 @@
       </div>
     </section>
 
-    <!-- TIPOS DE PRUEBAS (CAJA NEGRA Y BLANCA) -->
     <section class="section-wrapper">
       <h3 class="group-title">TIPOS DE PRUEBAS</h3>
       <p class="section-subtext">Además de los niveles, las pruebas pueden clasificarse según la forma en que se analiza el software.</p>
@@ -270,7 +244,6 @@
 
   </main>
 
-  <!-- MODAL / TARJETA DESPLEGABLE DE DETALLES -->
   <div class="modal" id="infoModal">
     <div class="modal-content light-card">
       <span class="close-modal" id="closeModal">&times;</span>
@@ -279,7 +252,6 @@
     </div>
   </div>
 
-  <!-- Pie de página -->
   <footer class="footer-banner">
     <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
     <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
@@ -288,7 +260,6 @@
     </div>
   </footer>
 
-  <!-- Script JS -->
   <script src="gestion.js"></script>
 </body>
 </html>

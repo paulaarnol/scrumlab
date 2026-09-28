@@ -1,6 +1,4 @@
-// ==========================================
-// 1. ANIMACIÓN DE PARTÍCULAS EN CANVAS
-// ==========================================
+
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -88,9 +86,7 @@ if (canvas) {
   animateParticles();
 }
 
-// ==========================================
-// 2. INTERACTIVIDAD DEL MENÚ Y SCROLL
-// ==========================================
+
 const menuBtn = document.getElementById('menuBtn');
 const megaMenu = document.getElementById('megaMenu');
 const scrollIndicator = document.getElementById('scrollIndicator');

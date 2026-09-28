@@ -1,4 +1,3 @@
-/* VARIABLES Y TEMA GENERAL */
 :root {
   --bg-gradient: linear-gradient(135deg, #07190f 0%, #0e2d1d 50%, #05140b 100%);
   --light-card-bg: #f4efdf; 
@@ -38,7 +37,6 @@ a {
   color: inherit;
 }
 
-/* CANVAS PARTICULAS */
 #particles-canvas {
   position: fixed;
   top: 0;
@@ -49,7 +47,6 @@ a {
   z-index: 0;
 }
 
-/* NAVBAR FIX */
 .navbar {
   position: fixed;
   top: 0;
@@ -103,7 +100,6 @@ a {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* DESPLEGABLE MEGAMENU */
 .mega-menu {
   position: fixed;
   top: 65px;
@@ -179,7 +175,6 @@ a {
   color: #076127;
 }
 
-/* CONTENEDOR DE LA PÁGINA */
 .page-container {
   position: relative;
   z-index: 1;
@@ -205,7 +200,6 @@ a {
   transform: translateX(-4px);
 }
 
-/* TARJETAS CLARAS */
 .light-card {
   background: var(--light-card-bg);
   color: var(--text-dark);
@@ -234,7 +228,6 @@ a {
   margin: 0 auto;
 }
 
-/* BLOQUES DE TEXTO INTERMEDIOS */
 .section-text-block {
   text-align: center;
   margin: 0.2rem 0;
@@ -261,7 +254,6 @@ a {
   letter-spacing: 0.5px;
 }
 
-/* GRUPOS Y SECCIONES */
 .section-wrapper {
   display: flex;
   flex-direction: column;
@@ -285,7 +277,6 @@ a {
   line-height: 1.5;
 }
 
-/* CONCEPTOS CLAVES (TRIO DE TARJETAS) */
 .cards-trio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -315,7 +306,6 @@ a {
   line-height: 1.45;
 }
 
-/* MÉTRICAS DE CALIDAD */
 .wide-card {
   padding: 2.2rem 2.5rem;
 }
@@ -364,7 +354,6 @@ a {
   top: -1px;
 }
 
-/* ESTÁNDARES Y BOTONES ISO */
 .center-content {
   display: flex;
   flex-direction: column;
@@ -423,8 +412,6 @@ a {
   max-width: 700px;
 }
 
-/* CONTENEDOR OSCURO INTERNO */
-/* ESTRUCTURA Y EFECTO GIRATORIO (FLIP CARD 3D) */
 .inner-dark-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -435,7 +422,7 @@ a {
 .flip-card {
   background-color: transparent;
   height: 250px;
-  perspective: 1000px; /* Habilita el efecto 3D */
+  perspective: 1000px; 
   cursor: pointer;
 }
 
@@ -448,7 +435,6 @@ a {
   transform-style: preserve-3d;
 }
 
-/* Rotación al pasar el mouse o mediante JS */
 .flip-card:hover .flip-card-inner,
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
@@ -460,7 +446,7 @@ a {
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; /* Oculta la cara trasera mientras gira */
+  backface-visibility: hidden; 
   border-radius: var(--radius-md);
   top: 0;
   left: 0;
@@ -472,7 +458,7 @@ a {
 
 .flip-card-back {
   transform: rotateY(180deg);
-  background: #0b2b1a; /* Un tono oscuro con contraste para diferenciar el reverso */
+  background: #0b2b1a; 
   border: 1px solid var(--accent-lime);
   display: flex;
   flex-direction: column;
@@ -496,7 +482,6 @@ a {
   color: var(--accent-lime);
 }
 
-/* Adaptación Responsive */
 @media (max-width: 768px) {
   .inner-dark-grid {
     grid-template-columns: 1fr;
@@ -573,7 +558,6 @@ a {
   display: block;
 }
 
-/* CAJA NEGRA Y BLANCA */
 .green-cards-duo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -623,7 +607,6 @@ a {
   transform: scale(1.04);
 }
 
-/* MODAL Y DESPLEGABLES */
 .modal {
   display: none;
   position: fixed;
@@ -708,7 +691,6 @@ a {
   height: auto;
 }
 
-/* FOOTER */
 .footer-banner {
   background: rgba(56, 142, 60, 0.85);
   backdrop-filter: blur(12px);
@@ -742,7 +724,6 @@ a {
   border-radius: 20px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .cards-trio,
   .inner-dark-grid,
@@ -753,7 +734,6 @@ a {
     padding: 1.5rem 1.2rem;
   }
 }
-/* Agrega esta propiedad para compensar los 65px de la navbar fija */
 #aseguramiento {
   scroll-margin-top: 100px;
 }
