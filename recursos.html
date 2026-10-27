@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glosario y Recursos - SCRUM LAB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gestion.css">
+  <link rel="stylesheet" href="recursos.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mega Menú Desplegable -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-container">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <section class="light-card hero-card">
+      <h1>GLOSARIO DE CALIDAD Y DESARROLLO DE SOFTWARE</h1>
+      <p>Este glosario reúne conceptos fundamentales relacionados con el desarrollo, la evaluación y la mejora de productos de software. Su objetivo es facilitar la comprensión de términos técnicos utilizados durante las distintas etapas de un proyecto.</p>
+    </section>
+
+    <!-- Controles de Búsqueda y Alfabeto -->
+    <section class="glossary-controls">
+      <div class="search-box-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="glossarySearch" placeholder="Buscar concepto o definición..." aria-label="Buscar término">
+        <button id="clearSearch" class="clear-btn" aria-label="Limpiar búsqueda"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="alphabet-bar" id="alphabetBar">
+        <button class="letter-btn active" data-letter="ALL">TODOS</button>
+        <button class="letter-btn" data-letter="A">A</button>
+        <button class="letter-btn" data-letter="B">B</button>
+        <button class="letter-btn" data-letter="C">C</button>
+        <button class="letter-btn" data-letter="D">D</button>
+        <button class="letter-btn" data-letter="E">E</button>
+        <button class="letter-btn" data-letter="F">F</button>
+        <button class="letter-btn" data-letter="G">G</button>
+        <button class="letter-btn" data-letter="H">H</button>
+        <button class="letter-btn" data-letter="I">I</button>
+        <button class="letter-btn disabled" data-letter="J">J</button>
+        <button class="letter-btn" data-letter="K">K</button>
+        <button class="letter-btn" data-letter="L">L</button>
+        <button class="letter-btn" data-letter="M">M</button>
+        <button class="letter-btn" data-letter="N">N</button>
+        <button class="letter-btn" data-letter="O">O</button>
+        <button class="letter-btn" data-letter="P">P</button>
+        <button class="letter-btn" data-letter="Q">Q</button>
+        <button class="letter-btn" data-letter="R">R</button>
+        <button class="letter-btn" data-letter="S">S</button>
+        <button class="letter-btn" data-letter="T">T</button>
+        <button class="letter-btn" data-letter="U">U</button>
+        <button class="letter-btn" data-letter="V">V</button>
+        <button class="letter-btn" data-letter="W">W</button>
+        <button class="letter-btn" data-letter="X">X</button>
+        <button class="letter-btn" data-letter="Y">Y</button>
+        <button class="letter-btn" data-letter="Z">Z</button>
+      </div>
+    </section>
+
+    <!-- Contenido del Glosario -->
+    <div class="glossary-content-wrapper" id="glossaryContent">
+      
+      <!-- LETRA A -->
+      <section class="letter-section" id="section-A" data-letter="A">
+        <div class="letter-badge">A</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="accesibilidad" data-def="capacidad de un sitio web o aplicación para ser utilizado por personas con diferentes capacidades, necesidades y formas de interacción.">
+            <h3 class="term-title">Accesibilidad</h3>
+            <p class="term-desc">Capacidad de un sitio web o aplicación para ser utilizado por personas con diferentes capacidades, necesidades y formas de interacción.</p>
+          </div>
+          <div class="term-card" data-term="agilidad" data-def="enfoque de trabajo que prioriza la colaboración, la entrega frecuente de resultados y la adaptación a los cambios durante el desarrollo de software.">
+            <h3 class="term-title">Agilidad</h3>
+            <p class="term-desc">Enfoque de trabajo que prioriza la colaboración, la entrega frecuente de resultados y la adaptación a los cambios durante el desarrollo de software.</p>
+          </div>
+          <div class="term-card" data-term="algoritmo" data-def="conjunto ordenado y finito de instrucciones que permiten resolver un problema o realizar una tarea.">
+            <h3 class="term-title">Algoritmo</h3>
+            <p class="term-desc">Conjunto ordenado y finito de instrucciones que permiten resolver un problema o realizar una tarea.</p>
+          </div>
+          <div class="term-card" data-term="análisis de requisitos" data-def="proceso de identificar, estudiar y documentar las necesidades y condiciones que debe cumplir un sistema.">
+            <h3 class="term-title">Análisis de requisitos</h3>
+            <p class="term-desc">Proceso de identificar, estudiar y documentar las necesidades y condiciones que debe cumplir un sistema.</p>
+          </div>
+          <div class="term-card" data-term="aseguramiento de la calidad" data-def="conjunto de actividades planificadas que buscan garantizar que los procesos y productos de software cumplan con los requisitos de calidad establecidos.">
+            <h3 class="term-title">Aseguramiento de la calidad</h3>
+            <p class="term-desc">Conjunto de actividades planificadas que buscan garantizar que los procesos y productos de software cumplan con los requisitos de calidad establecidos.</p>
+          </div>
+          <div class="term-card" data-term="auditoría de software" data-def="revisión sistemática de un producto o proceso para comprobar si cumple con determinados requisitos, normas o procedimientos.">
+            <h3 class="term-title">Auditoría de software</h3>
+            <p class="term-desc">Revisión sistemática de un producto o proceso para comprobar si cumple con determinados requisitos, normas o procedimientos.</p>
+          </div>
+        </div>
+      </section>
+
+<!-- LETRA B -->
+      <section class="letter-section" id="section-B" data-letter="B">
+        <div class="letter-badge">B</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="backlog" data-def="lista priorizada de tareas, funcionalidades, mejoras y correcciones pendientes de realizar en un proyecto.">
+            <h3 class="term-title">Backlog</h3>
+            <p class="term-desc">Lista priorizada de tareas, funcionalidades, mejoras y correcciones pendientes de realizar en un proyecto.</p>
+          </div>
+          <div class="term-card" data-term="base de datos" data-def="conjunto organizado de datos que pueden almacenarse, consultarse, modificarse y administrarse mediante un sistema informático.">
+            <h3 class="term-title">Base de datos</h3>
+            <p class="term-desc">Conjunto organizado de datos que pueden almacenarse, consultarse, modificarse y administrarse mediante un sistema informático.</p>
+          </div>
+          <div class="term-card" data-term="bug" data-def="error o defecto que puede provocar que un programa funcione de manera incorrecta o produzca resultados inesperados.">
+            <h3 class="term-title">Bug</h3>
+            <p class="term-desc">Error o defecto que puede provocar que un programa funcione de manera incorrecta o produzca resultados inesperados.</p>
+          </div>
+          <div class="term-card" data-term="caja blanca" data-def="técnica de prueba que examina la estructura interna, el código y los caminos de ejecución de un programa.">
+            <h3 class="term-title">Caja blanca</h3>
+            <p class="term-desc">Técnica de prueba que examina la estructura interna, el código y los caminos de ejecución de un programa.</p>
+          </div>
+          <div class="term-card" data-term="caja negra" data-def="técnica de prueba que evalúa las entradas y salidas de un sistema sin necesidad de conocer su código interno.">
+            <h3 class="term-title">Caja negra</h3>
+            <p class="term-desc">Técnica de prueba que evalúa las entradas y salidas de un sistema sin necesidad de conocer su código interno.</p>
+          </div>
+          <div class="term-card" data-term="calidad del software" data-def="grado en que un producto de software cumple con los requisitos establecidos y satisface las necesidades de sus usuarios.">
+            <h3 class="term-title">Calidad del software</h3>
+            <p class="term-desc">Grado en que un producto de software cumple con los requisitos establecidos y satisface las necesidades de sus usuarios.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA C -->
+      <section class="letter-section" id="section-C" data-letter="C">
+        <div class="letter-badge">C</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="caso de prueba" data-def="conjunto de condiciones, datos de entrada, pasos y resultados esperados que se utiliza para comprobar una funcionalidad.">
+            <h3 class="term-title">Caso de prueba</h3>
+            <p class="term-desc">Conjunto de condiciones, datos de entrada, pasos y resultados esperados que se utiliza para comprobar una funcionalidad.</p>
+          </div>
+          <div class="term-card" data-term="ciclo de vida del software" data-def="conjunto de etapas por las que pasa un producto de software, desde la identificación de una necesidad hasta su mantenimiento y evolución.">
+            <h3 class="term-title">Ciclo de vida del software</h3>
+            <p class="term-desc">Conjunto de etapas por las que pasa un producto de software, desde la identificación de una necesidad hasta su mantenimiento y evolución.</p>
+          </div>
+          <div class="term-card" data-term="codificación" data-def="etapa en la que se escribe el código fuente que implementa las funcionalidades diseñadas para un sistema.">
+            <h3 class="term-title">Codificación</h3>
+            <p class="term-desc">Etapa en la que se escribe el código fuente que implementa las funcionalidades diseñadas para un sistema.</p>
+          </div>
+          <div class="term-card" data-term="compatibilidad" data-def="capacidad de un software para funcionar correctamente con otros sistemas, dispositivos, programas o entornos.">
+            <h3 class="term-title">Compatibilidad</h3>
+            <p class="term-desc">Capacidad de un software para funcionar correctamente con otros sistemas, dispositivos, programas o entornos.</p>
+          </div>
+          <div class="term-card" data-term="complejidad" data-def="grado de dificultad que presenta un sistema o programa para comprenderlo, desarrollarlo, probarlo o mantenerlo.">
+            <h3 class="term-title">Complejidad</h3>
+            <p class="term-desc">Grado de dificultad que presenta un sistema o programa para comprenderlo, desarrollarlo, probarlo o mantenerlo.</p>
+          </div>
+          <div class="term-card" data-term="corrección de errores" data-def="proceso de identificar y solucionar defectos que afectan al funcionamiento esperado de un programa.">
+            <h3 class="term-title">Corrección de errores</h3>
+            <p class="term-desc">Proceso de identificar y solucionar defectos que afectan al funcionamiento esperado de un programa.</p>
+          </div>
+          <div class="term-card" data-term="criterios de aceptación" data-def="condiciones que una funcionalidad debe cumplir para considerarse terminada y aceptable según las necesidades del usuario.">
+            <h3 class="term-title">Criterios de aceptación</h3>
+            <p class="term-desc">Condiciones que una funcionalidad debe cumplir para considerarse terminada y aceptable según las necesidades del usuario.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA D -->
+      <section class="letter-section" id="section-D" data-letter="D">
+        <div class="letter-badge">D</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="daily scrum" data-def="reunión breve de scrum en la que los developers inspeccionan el progreso hacia el objetivo del sprint y ajustan su plan de trabajo.">
+            <h3 class="term-title">Daily Scrum</h3>
+            <p class="term-desc">Reunión breve de Scrum en la que los Developers inspeccionan el progreso hacia el objetivo del Sprint y ajustan su plan de trabajo.</p>
+          </div>
+          <div class="term-card" data-term="depuración (debugging)" data-def="proceso de localizar, analizar y corregir errores en el código de un programa.">
+            <h3 class="term-title">Depuración (debugging)</h3>
+            <p class="term-desc">Proceso de localizar, analizar y corregir errores en el código de un programa.</p>
+          </div>
+          <div class="term-card" data-term="desarrollo incremental" data-def="enfoque en el que un producto se construye mediante entregas sucesivas, incorporando nuevas funcionalidades en cada incremento.">
+            <h3 class="term-title">Desarrollo incremental</h3>
+            <p class="term-desc">Enfoque en el que un producto se construye mediante entregas sucesivas, incorporando nuevas funcionalidades en cada incremento.</p>
+          </div>
+          <div class="term-card" data-term="desarrollo iterativo" data-def="enfoque que mejora progresivamente una solución mediante ciclos repetidos de construcción, evaluación y ajuste.">
+            <h3 class="term-title">Desarrollo iterativo</h3>
+            <p class="term-desc">Enfoque que mejora progresivamente una solución mediante ciclos repetidos de construcción, evaluación y ajuste.</p>
+          </div>
+          <div class="term-card" data-term="diseño de software" data-def="actividad que define la estructura, los componentes, las interfaces y las decisiones técnicas necesarias para construir un sistema.">
+            <h3 class="term-title">Diseño de software</h3>
+            <p class="term-desc">Actividad que define la estructura, los componentes, las interfaces y las decisiones técnicas necesarias para construir un sistema.</p>
+          </div>
+          <div class="term-card" data-term="documentación" data-def="conjunto de textos, diagramas e instrucciones que describen el funcionamiento, la estructura, el uso o el mantenimiento de un software.">
+            <h3 class="term-title">Documentación</h3>
+            <p class="term-desc">Conjunto de textos, diagramas e instrucciones que describen el funcionamiento, la estructura, el uso o el mantenimiento de un software.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA E -->
+      <section class="letter-section" id="section-E" data-letter="E">
+        <div class="letter-badge">E</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="eficiencia" data-def="capacidad de un sistema para ofrecer los resultados esperados utilizando adecuadamente recursos como el tiempo de procesamiento y la memoria.">
+            <h3 class="term-title">Eficiencia</h3>
+            <p class="term-desc">Capacidad de un sistema para ofrecer los resultados esperados utilizando adecuadamente recursos como el tiempo de procesamiento y la memoria.</p>
+          </div>
+          <div class="term-card" data-term="error" data-def="equivocación humana o técnica que puede introducir un defecto en el software.">
+            <h3 class="term-title">Error</h3>
+            <p class="term-desc">Equivocación humana o técnica que puede introducir un defecto en el software.</p>
+          </div>
+          <div class="term-card" data-term="escalabilidad" data-def="capacidad de un sistema para adaptarse al aumento de usuarios, datos o carga de trabajo sin perder un nivel de funcionamiento adecuado.">
+            <h3 class="term-title">Escalabilidad</h3>
+            <p class="term-desc">Capacidad de un sistema para adaptarse al aumento de usuarios, datos o carga de trabajo sin perder un nivel de funcionamiento adecuado.</p>
+          </div>
+          <div class="term-card" data-term="estándar" data-def="conjunto de criterios, reglas o especificaciones establecidos para orientar y unificar procesos o productos.">
+            <h3 class="term-title">Estándar</h3>
+            <p class="term-desc">Conjunto de criterios, reglas o especificaciones establecidos para orientar y unificar procesos o productos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA F -->
+      <section class="letter-section" id="section-F" data-letter="F">
+        <div class="letter-badge">F</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="fiabilidad" data-def="capacidad de un sistema para funcionar correctamente y mantener su comportamiento esperado durante determinadas condiciones y períodos de uso.">
+            <h3 class="term-title">Fiabilidad</h3>
+            <p class="term-desc">Capacidad de un sistema para funcionar correctamente y mantener su comportamiento esperado durante determinadas condiciones y períodos de uso.</p>
+          </div>
+          <div class="term-card" data-term="framework" data-def="estructura de software que proporciona herramientas, componentes y reglas para facilitar el desarrollo de aplicaciones.">
+            <h3 class="term-title">Framework</h3>
+            <p class="term-desc">Estructura de software que proporciona herramientas, componentes y reglas para facilitar el desarrollo de aplicaciones.</p>
+          </div>
+          <div class="term-card" data-term="funcionalidad" data-def="capacidad de un producto para ofrecer las funciones que necesita el usuario y cumplir los requisitos establecidos.">
+            <h3 class="term-title">Funcionalidad</h3>
+            <p class="term-desc">Capacidad de un producto para ofrecer las funciones que necesita el usuario y cumplir los requisitos establecidos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA G -->
+      <section class="letter-section" id="section-G" data-letter="G">
+        <div class="letter-badge">G</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="gestión de calidad" data-def="actividades y procedimientos destinados a planificar, controlar, asegurar y mejorar la calidad de un producto o proceso.">
+            <h3 class="term-title">Gestión de calidad</h3>
+            <p class="term-desc">Actividades y procedimientos destinados a planificar, controlar, asegurar y mejorar la calidad de un producto o proceso.</p>
+          </div>
+          <div class="term-card" data-term="git" data-def="sistema de control de versiones que permite registrar cambios en los archivos de un proyecto y recuperar versiones anteriores.">
+            <h3 class="term-title">Git</h3>
+            <p class="term-desc">Sistema de control de versiones que permite registrar cambios en los archivos de un proyecto y recuperar versiones anteriores.</p>
+          </div>
+          <div class="term-card" data-term="github" data-def="plataforma que permite alojar repositorios git y colaborar en proyectos mediante herramientas de seguimiento, revisión y gestión del código.">
+            <h3 class="term-title">GitHub</h3>
+            <p class="term-desc">Plataforma que permite alojar repositorios Git y colaborar en proyectos mediante herramientas de seguimiento, revisión y gestión del código.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA H -->
+      <section class="letter-section" id="section-H" data-letter="H">
+        <div class="letter-badge">H</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="hardware" data-def="componentes físicos de una computadora o dispositivo, como el procesador, la memoria y los dispositivos de almacenamiento.">
+            <h3 class="term-title">Hardware</h3>
+            <p class="term-desc">Componentes físicos de una computadora o dispositivo, como el procesador, la memoria y los dispositivos de almacenamiento.</p>
+          </div>
+          <div class="term-card" data-term="historia de usuario" data-def="descripción breve de una necesidad o funcionalidad desde la perspectiva de quien utilizará el sistema.">
+            <h3 class="term-title">Historia de usuario</h3>
+            <p class="term-desc">Descripción breve de una necesidad o funcionalidad desde la perspectiva de quien utilizará el sistema.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA I -->
+      <section class="letter-section" id="section-I" data-letter="I">
+        <div class="letter-badge">I</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="implementación" data-def="etapa en la que una solución se desarrolla o se pone en funcionamiento en el entorno previsto, según el contexto del proyecto.">
+            <h3 class="term-title">Implementación</h3>
+            <p class="term-desc">Etapa en la que una solución se desarrolla o se pone en funcionamiento en el entorno previsto, según el contexto del proyecto.</p>
+          </div>
+          <div class="term-card" data-term="incidencia" data-def="suceso o problema detectado durante el uso, desarrollo o prueba de un sistema que requiere análisis o seguimiento.">
+            <h3 class="term-title">Incidencia</h3>
+            <p class="term-desc">Suceso o problema detectado durante el uso, desarrollo o prueba de un sistema que requiere análisis o seguimiento.</p>
+          </div>
+          <div class="term-card" data-term="integración" data-def="proceso de combinar componentes o módulos para verificar que funcionen correctamente en conjunto.">
+            <h3 class="term-title">Integración</h3>
+            <p class="term-desc">Proceso de combinar componentes o módulos para verificar que funcionen correctamente en conjunto.</p>
+          </div>
+          <div class="term-card" data-term="interfaz de usuario (ui)" data-def="elementos visuales e interactivos mediante los cuales una persona utiliza una aplicación o sistema.">
+            <h3 class="term-title">Interfaz de usuario (UI)</h3>
+            <p class="term-desc">Elementos visuales e interactivos mediante los cuales una persona utiliza una aplicación o sistema.</p>
+          </div>
+          <div class="term-card" data-term="iteración" data-def="ciclo de trabajo en el que se realiza una parte del desarrollo, se evalúa el resultado y se introducen mejoras.">
+            <h3 class="term-title">Iteración</h3>
+            <p class="term-desc">Ciclo de trabajo en el que se realiza una parte del desarrollo, se evalúa el resultado y se introducen mejoras.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA K -->
+      <section class="letter-section" id="section-K" data-letter="K">
+        <div class="letter-badge">K</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="kanban" data-def="método visual de gestión del trabajo que permite observar el estado de las tareas, controlar el flujo y detectar acumulaciones de trabajo.">
+            <h3 class="term-title">Kanban</h3>
+            <p class="term-desc">Método visual de gestión del trabajo que permite observar el estado de las tareas, controlar el flujo y detectar acumulaciones de trabajo.</p>
+          </div>
+          <div class="term-card" data-term="kit de desarrollo de software (sdk)" data-def="conjunto de herramientas, bibliotecas y recursos que facilitan la creación de aplicaciones para una plataforma determinada.">
+            <h3 class="term-title">Kit de desarrollo de software (SDK)</h3>
+            <p class="term-desc">Conjunto de herramientas, bibliotecas y recursos que facilitan la creación de aplicaciones para una plataforma determinada.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA L -->
+      <section class="letter-section" id="section-L" data-letter="L">
+        <div class="letter-badge">L</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="legibilidad" data-def="facilidad con la que se puede leer y comprender un texto, una interfaz o un código fuente.">
+            <h3 class="term-title">Legibilidad</h3>
+            <p class="term-desc">Facilidad con la que se puede leer y comprender un texto, una interfaz o un código fuente.</p>
+          </div>
+          <div class="term-card" data-term="linter" data-def="herramienta que analiza código fuente para detectar posibles errores, inconsistencias y problemas de estilo.">
+            <h3 class="term-title">Linter</h3>
+            <p class="term-desc">Herramienta que analiza código fuente para detectar posibles errores, inconsistencias y problemas de estilo.</p>
+          </div>
+          <div class="term-card" data-term="lista de tareas" data-def="conjunto de actividades pendientes que deben realizarse para alcanzar un objetivo o completar una parte del proyecto.">
+            <h3 class="term-title">Lista de tareas</h3>
+            <p class="term-desc">Conjunto de actividades pendientes que deben realizarse para alcanzar un objetivo o completar una parte del proyecto.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA M -->
+      <section class="letter-section" id="section-M" data-letter="M">
+        <div class="letter-badge">M</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="mantenibilidad" data-def="facilidad con la que un software puede analizarse, corregirse, modificarse o mejorarse después de su desarrollo.">
+            <h3 class="term-title">Mantenibilidad</h3>
+            <p class="term-desc">Facilidad con la que un software puede analizarse, corregirse, modificarse o mejorarse después de su desarrollo.</p>
+          </div>
+          <div class="term-card" data-term="manifiesto ágil" data-def="declaración que establece cuatro valores y doce principios para orientar el desarrollo ágil de software.">
+            <h3 class="term-title">Manifiesto Ágil</h3>
+            <p class="term-desc">Declaración que establece cuatro valores y doce principios para orientar el desarrollo ágil de software.</p>
+          </div>
+          <div class="term-card" data-term="metodología de desarrollo" data-def="conjunto de prácticas, actividades y criterios que organizan el proceso de construcción de un producto de software.">
+            <h3 class="term-title">Metodología de desarrollo</h3>
+            <p class="term-desc">Conjunto de prácticas, actividades y criterios que organizan el proceso de construcción de un producto de software.</p>
+          </div>
+          <div class="term-card" data-term="modelo en cascada" data-def="modelo de desarrollo que organiza las etapas del proyecto de manera secuencial, advancing de una fase a otra.">
+            <h3 class="term-title">Modelo en cascada</h3>
+            <p class="term-desc">Modelo de desarrollo que organiza las etapas del proyecto de manera secuencial, avanzando de una fase a otra.</p>
+          </div>
+          <div class="term-card" data-term="modelo en v" data-def="modelo que relaciona las etapas de desarrollo con actividades de verificación y validación correspondientes.">
+            <h3 class="term-title">Modelo en V</h3>
+            <p class="term-desc">Modelo que relaciona las etapas de desarrollo con actividades de verificación y validación correspondientes.</p>
+          </div>
+          <div class="term-card" data-term="modelo iterativo e incremental" data-def="enfoque que combina ciclos de mejora sucesivos con entregas progresivas de funcionalidades.">
+            <h3 class="term-title">Modelo iterativo e incremental</h3>
+            <p class="term-desc">Enfoque que combina ciclos de mejora sucesivos con entregas progresivas de funcionalidades.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA N -->
+      <section class="letter-section" id="section-N" data-letter="N">
+        <div class="letter-badge">N</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="no conformidad" data-def="incumplimiento de un requisito, criterio, norma o condición previamente establecida.">
+            <h3 class="term-title">No conformidad</h3>
+            <p class="term-desc">Incumplimiento de un requisito, criterio, norma o condición previamente establecida.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA O -->
+      <section class="letter-section" id="section-O" data-letter="O">
+        <div class="letter-badge">O</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="objetivo del sprint" data-def="propósito principal que el equipo scrum busca alcanzar durante un sprint.">
+            <h3 class="term-title">Objetivo del Sprint</h3>
+            <p class="term-desc">Propósito principal que el equipo Scrum busca alcanzar durante un Sprint.</p>
+          </div>
+          <div class="term-card" data-term="open source (código abierto)" data-def="modelo de distribución de software cuyo código fuente está disponible bajo una licencia que permite determinados usos, modificaciones y redistribuciones.">
+            <h3 class="term-title">Open source (código abierto)</h3>
+            <p class="term-desc">Modelo de distribución de software cuyo código fuente está disponible bajo una licencia que permite determinados usos, modificaciones y redistribuciones.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA P -->
+      <section class="letter-section" id="section-P" data-letter="P">
+        <div class="letter-badge">P</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="pair programming (programación en pareja)" data-def="práctica de xp en la que dos programadores trabajan juntos sobre una misma tarea, compartiendo la escritura y revisión del código.">
+            <h3 class="term-title">Pair programming (programación en pareja)</h3>
+            <p class="term-desc">Práctica de XP en la que dos programadores trabajan juntos sobre una misma tarea, compartiendo la escritura y revisión del código.</p>
+          </div>
+          <div class="term-card" data-term="planificación" data-def="actividad que permite definir objetivos, tareas, recursos, prioridades y tiempos necesarios para desarrollar un proyecto.">
+            <h3 class="term-title">Planificación</h3>
+            <p class="term-desc">Actividad que permite definir objetivos, tareas, recursos, prioridades y tiempos necesarios para desarrollar un proyecto.</p>
+          </div>
+          <div class="term-card" data-term="portabilidad" data-def="capacidad de un software para trasladarse y funcionar en diferentes plataformas o entornos con un esfuerzo razonable.">
+            <h3 class="term-title">Portabilidad</h3>
+            <p class="term-desc">Capacidad de un software para trasladarse y funcionar en diferentes plataformas o entornos con un esfuerzo razonable.</p>
+          </div>
+          <div class="term-card" data-term="product backlog" data-def="lista ordenada de todo lo que se conoce como necesario para mejorar el producto en scrum.">
+            <h3 class="term-title">Product Backlog</h3>
+            <p class="term-desc">Lista ordenada de todo lo que se conoce como necesario para mejorar el producto en Scrum.</p>
+          </div>
+          <div class="term-card" data-term="product owner" data-def="responsable de maximizar el valor del producto y de gestionar eficazmente el product backlog en scrum.">
+            <h3 class="term-title">Product Owner</h3>
+            <p class="term-desc">Responsable de maximizar el valor del producto y de gestionar eficazmente el Product Backlog en Scrum.</p>
+          </div>
+          <div class="term-card" data-term="prueba de integración" data-def="prueba que comprueba la interacción entre dos o más componentes de un sistema.">
+            <h3 class="term-title">Prueba de integración</h3>
+            <p class="term-desc">Prueba que comprueba la interacción entre dos o más componentes de un sistema.</p>
+          </div>
+          <div class="term-card" data-term="prueba de sistema" data-def="prueba que evalúa el sistema completo para verificar si cumple con los requisitos especificados.">
+            <h3 class="term-title">Prueba de sistema</h3>
+            <p class="term-desc">Prueba que evalúa el sistema completo para verificar si cumple con los requisitos especificados.</p>
+          </div>
+          <div class="term-card" data-term="prueba unitaria" data-def="prueba que verifica una unidad pequeña de código, como una función o un método, de forma aislada.">
+            <h3 class="term-title">Prueba unitaria</h3>
+            <p class="term-desc">Prueba que verifica una unidad pequeña de código, como una función o un método, de forma aislada.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA Q -->
+      <section class="letter-section" id="section-Q" data-letter="Q">
+        <div class="letter-badge">Q</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="qa (quality assurance)" data-def="sigla de *quality assurance*, que significa aseguramiento de la calidad. comprende actividades destinadas a prevenir problemas y mejorar los procesos que producen software.">
+            <h3 class="term-title">QA (Quality Assurance)</h3>
+            <p class="term-desc">Sigla de *Quality Assurance*, que significa aseguramiento de la calidad. Comprende actividades destinadas a prevenir problemas y mejorar los procesos que producen software.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA R -->
+      <section class="letter-section" id="section-R" data-letter="R">
+        <div class="letter-badge">R</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="refactorización" data-def="modificación de la estructura interna del código para mejorar su claridad o mantenimiento sin cambiar su comportamiento externo esperado.">
+            <h3 class="term-title">Refactorización</h3>
+            <p class="term-desc">Modificación de la estructura interna del código para mejorar su claridad o mantenimiento sin cambiar su comportamiento externo esperado.</p>
+          </div>
+          <div class="term-card" data-term="requisito" data-def="necesidad, condición o capacidad que un sistema debe cumplir.">
+            <h3 class="term-title">Requisito</h3>
+            <p class="term-desc">Necesidad, condición o capacidad que un sistema debe cumplir.</p>
+          </div>
+          <div class="term-card" data-term="retrospectiva del sprint" data-def="evento de scrum en el que el equipo analiza cómo trabajó durante el sprint e identifica mejoras para el siguiente ciclo.">
+            <h3 class="term-title">Retrospectiva del Sprint</h3>
+            <p class="term-desc">Evento de Scrum en el que el equipo analiza cómo trabajó durante el Sprint e identifica mejoras para el siguiente ciclo.</p>
+          </div>
+          <div class="term-card" data-term="revisión del sprint (sprint review)" data-def="evento de scrum en el que se inspeccionan los resultados del sprint y se evalúan posibles ajustes futuros del producto.">
+            <h3 class="term-title">Revisión del Sprint (Sprint Review)</h3>
+            <p class="term-desc">Evento de Scrum en el que se inspeccionan los resultados del Sprint y se evalúan posibles ajustes futuros del producto.</p>
+          </div>
+          <div class="term-card" data-term="riesgo" data-def="situación incierta que, si ocurre, puede afectar los objetivos, los plazos, los costos o la calidad de un proyecto.">
+            <h3 class="term-title">Riesgo</h3>
+            <p class="term-desc">Situación incierta que, si ocurre, puede afectar los objetivos, los plazos, los costos o la calidad de un proyecto.</p>
+          </div>
+          <div class="term-card" data-term="rol" data-def="conjunto de responsabilidades y funciones asignadas a una persona o grupo dentro de una organización o metodología de trabajo.">
+            <h3 class="term-title">Rol</h3>
+            <p class="term-desc">Conjunto de responsabilidades y funciones asignadas a una persona o grupo dentro de una organización o metodología de trabajo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA S -->
+      <section class="letter-section" id="section-S" data-letter="S">
+        <div class="letter-badge">S</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="scrum" data-def="marco de trabajo ágil que organiza el desarrollo en sprints y utiliza eventos, responsabilidades y artefactos para facilitar la inspección y la adaptación.">
+            <h3 class="term-title">Scrum</h3>
+            <p class="term-desc">Marco de trabajo ágil que organiza el desarrollo en Sprints y utiliza eventos, responsabilidades y artefactos para facilitar la inspección y la adaptación.</p>
+          </div>
+          <div class="term-card" data-term="seguridad" data-def="capacidad de un sistema para proteger la información y los recursos frente a accesos, modificaciones o acciones no autorizadas.">
+            <h3 class="term-title">Seguridad</h3>
+            <p class="term-desc">Capacidad de un sistema para proteger la información y los recursos frente a accesos, modificaciones o acciones no autorizadas.</p>
+          </div>
+          <div class="term-card" data-term="sistema de gestión de calidad" data-def="conjunto de políticas, procesos y responsabilidades que una organización utiliza para gestionar y mejorar la calidad.">
+            <h3 class="term-title">Sistema de gestión de calidad</h3>
+            <p class="term-desc">Conjunto de políticas, procesos y responsabilidades que una organización utiliza para gestionar y mejorar la calidad.</p>
+          </div>
+          <div class="term-card" data-term="software" data-def="conjunto de programas, instrucciones y datos que permiten a un dispositivo realizar determinadas tareas.">
+            <h3 class="term-title">Software</h3>
+            <p class="term-desc">Conjunto de programas, instrucciones y datos que permiten a un dispositivo realizar determinadas tareas.</p>
+          </div>
+          <div class="term-card" data-term="sprint" data-def="período de duración fija en scrum durante el cual se trabaja para alcanzar un objetivo y producir un incremento de producto utilizable.">
+            <h3 class="term-title">Sprint</h3>
+            <p class="term-desc">Período de duración fija en Scrum durante el cual se trabaja para alcanzar un objetivo y producir un incremento de producto utilizable.</p>
+          </div>
+          <div class="term-card" data-term="sprint backlog" data-def="objetivo del sprint, conjunto de elementos seleccionados del product backlog y plan de trabajo para entregar el incremento.">
+            <h3 class="term-title">Sprint Backlog</h3>
+            <p class="term-desc">Objetivo del Sprint, conjunto de elementos seleccionados del Product Backlog y plan de trabajo para entregar el incremento.</p>
+          </div>
+          <div class="term-card" data-term="stakeholder (parte interesada)" data-def="persona, grupo u organización que puede afectar al proyecto o verse afectado por sus resultados.">
+            <h3 class="term-title">Stakeholder (parte interesada)</h3>
+            <p class="term-desc">Persona, grupo u organización que puede afectar al proyecto o verse afectado por sus resultados.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA T -->
+      <section class="letter-section" id="section-T" data-letter="T">
+        <div class="letter-badge">T</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="tdd (test-driven development)" data-def="práctica de desarrollo en la que se escribe primero una prueba, luego el código necesario para superarla y después se mejora la implementación.">
+            <h3 class="term-title">TDD (Test-Driven Development)</h3>
+            <p class="term-desc">Práctica de desarrollo en la que se escribe primero una prueba, luego el código necesario para superarla y después se mejora la implementación.</p>
+          </div>
+          <div class="term-card" data-term="test case" data-def="expresión en inglés equivalente a caso de prueba: conjunto de pasos, condiciones y resultados esperados para verificar un comportamiento.">
+            <h3 class="term-title">Test case</h3>
+            <p class="term-desc">Expresión en inglés equivalente a caso de prueba: conjunto de pasos, condiciones y resultados esperados para verificar un comportamiento.</p>
+          </div>
+          <div class="term-card" data-term="tester" data-def="persona que planifica o ejecuta pruebas para detectar defectos y comprobar que el software cumpla los requisitos.">
+            <h3 class="term-title">Tester</h3>
+            <p class="term-desc">Persona que planifica o ejecuta pruebas para detectar defectos y comprobar que el software cumpla los requisitos.</p>
+          </div>
+          <div class="term-card" data-term="testing (pruebas de software)" data-def="proceso de evaluar un sistema o sus componentes para detectar defectos y verificar su comportamiento frente a los requisitos.">
+            <h3 class="term-title">Testing (pruebas de software)</h3>
+            <p class="term-desc">Proceso de evaluar un sistema o sus componentes para detectar defectos y verificar su comportamiento frente a los requisitos.</p>
+          </div>
+          <div class="term-card" data-term="trazabilidad" data-def="capacidad de relacionar requisitos con su diseño, implementación, pruebas y resultados para realizar un seguimiento de su cumplimiento.">
+            <h3 class="term-title">Trazabilidad</h3>
+            <p class="term-desc">Capacidad de relacionar requisitos con su diseño, implementación, pruebas y resultados para realizar un seguimiento de su cumplimiento.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA U -->
+      <section class="letter-section" id="section-U" data-letter="U">
+        <div class="letter-badge">U</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="usabilidad" data-def="grado en que un sistema puede ser utilizado por usuarios determinados para alcanzar objetivos de manera eficaz, eficiente y satisfactoria en un contexto de uso.">
+            <h3 class="term-title">Usabilidad</h3>
+            <p class="term-desc">Grado en que un sistema puede ser utilizado por usuarios determinados para alcanzar objetivos de manera eficaz, eficiente y satisfactoria en un contexto de uso.</p>
+          </div>
+          <div class="term-card" data-term="usuario" data-def="persona que utiliza o interactúa con un sistema de software para realizar una tarea o satisfacer una necesidad.">
+            <h3 class="term-title">Usuario</h3>
+            <p class="term-desc">Persona que utiliza o interactúa con un sistema de software para realizar una tarea o satisfacer una necesidad.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA V -->
+      <section class="letter-section" id="section-V" data-letter="V">
+        <div class="letter-badge">V</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="validación" data-def="proceso de comprobar si el producto desarrollado satisface las necesidades y expectativas de los usuarios.">
+            <h3 class="term-title">Validación</h3>
+            <p class="term-desc">Proceso de comprobar si el producto desarrollado satisface las necesidades y expectativas de los usuarios.</p>
+          </div>
+          <div class="term-card" data-term="verificación" data-def="proceso de comprobar si un producto o resultado cumple los requisitos y especificaciones establecidos.">
+            <h3 class="term-title">Verificación</h3>
+            <p class="term-desc">Proceso de comprobar si un producto o resultado cumple los requisitos y especificaciones establecidos.</p>
+          </div>
+          <div class="term-card" data-term="versión" data-def="estado identificado de un software en un momento determinado de su evolución.">
+            <h3 class="term-title">Versión</h3>
+            <p class="term-desc">Estado identificado de un software en un momento determinado de su evolución.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA W -->
+      <section class="letter-section" id="section-W" data-letter="W">
+        <div class="letter-badge">W</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="wip (work in progress)" data-def="cantidad de tareas que se encuentran en proceso de realización. en kanban, limitar el wip ayuda a evitar la sobrecarga y mejorar el flujo de trabajo.">
+            <h3 class="term-title">WIP (Work in Progress)</h3>
+            <p class="term-desc">Cantidad de tareas que se encuentran en proceso de realización. En Kanban, limitar el WIP ayuda a evitar la sobrecarga y mejorar el flujo de trabajo.</p>
+          </div>
+          <div class="term-card" data-term="workflow (flujo de trabajo)" data-def="secuencia organizada de actividades y estados por los que pasa una tarea o proceso hasta completarse.">
+            <h3 class="term-title">Workflow (flujo de trabajo)</h3>
+            <p class="term-desc">Secuencia organizada de actividades y estados por los que pasa una tarea o proceso hasta completarse.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA X -->
+      <section class="letter-section" id="section-X" data-letter="X">
+        <div class="letter-badge">X</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="xp (extreme programming)" data-def="metodología ágil que promueve prácticas de ingeniería como programación en pareja, pruebas frecuentes, integración continua y refactorización.">
+            <h3 class="term-title">XP (Extreme Programming)</h3>
+            <p class="term-desc">Metodología ágil que promueve prácticas de ingeniería como programación en pareja, pruebas frecuentes, integración continua y refactorización.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA Y -->
+      <section class="letter-section" id="section-Y" data-letter="Y">
+        <div class="letter-badge">Y</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="yield (rendimiento o producción)" data-def="en determinados contextos informáticos, término utilizado para referirse a resultados producidos o a la cesión del control de ejecución. su significado concreto depende del contexto técnico.">
+            <h3 class="term-title">Yield (rendimiento o producción)</h3>
+            <p class="term-desc">En determinados contextos informáticos, término utilizado para referirse a resultados producidos o a la cesión del control de ejecución. Su significado concreto depende del contexto técnico.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETRA Z -->
+      <section class="letter-section" id="section-Z" data-letter="Z">
+        <div class="letter-badge">Z</div>
+        <div class="terms-grid">
+          <div class="term-card" data-term="zero-day (día cero)" data-def="vulnerabilidad de seguridad desconocida o para la que todavía no existe una solución disponible en el momento en que se detecta o comienza a explotarse.">
+            <h3 class="term-title">Zero-day (día cero)</h3>
+            <p class="term-desc">Vulnerabilidad de seguridad desconocida o para la que todavía no existe una solución disponible en el momento en que se detecta o comienza a explotarse.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="no-results" id="noResults" style="display: none;">
+        <i class="fa-solid fa-file-circle-xmark"></i>
+        <p>No se encontraron términos que coincidan con la búsqueda.</p>
+      </div>
+
+    </div>
+
+    <!-- MENSAJE DE SIN RESULTADOS (Oculto por defecto) -->
+    <div id="noResults" class="no-results" style="display: none;">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <h3>No se encontraron resultados</h3>
+      <p>Intenta buscando con otro término o letra.</p>
+    </div>
+
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
+<section class="section-wrapper" style="margin-top: 3.5rem;">
+  <div class="section-text-block green-heading" id="preguntas-frecuentes">
+    <h2>PREGUNTAS FRECUENTES</h2>
+  </div>
+
+  <div class="faq-main-card">
+    <p class="faq-intro">Encontrá respuestas a las dudas más comunes sobre la calidad y el desarrollo de software.</p>
+    
+    <div class="faq-list">
+      
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué es la calidad del software?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Es el grado en que un producto de software cumple los requisitos establecidos y satisface las necesidades de sus usuarios.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Por qué es importante realizar pruebas de software?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Permite detectar y corregir errores antes de que el sistema llegue a producción, garantizando un funcionamiento correcto y confiable.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cuál es la diferencia entre verificación y validación?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>La verificación comprueba si el software se construyó correctamente según las especificaciones, mientras que la validación comprueba si el sistema cumple con las necesidades reales del usuario.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué normas se utilizan para evaluar la calidad del software?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Se utilizan estándares internacionales como la familia de normas ISO/IEC 25000 (SQuaRE) y modelos de madurez como CMMI.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué es Scrum?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Es un marco de trabajo ágil que permite abordar proyectos complejos mediante ciclos cortos de trabajo llamados Sprints, fomentando la colaboración y entrega continua de valor.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Para qué sirve Kanban?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Es un método visual de gestión de flujo de trabajo que ayuda a optimizar las tareas, limitar el trabajo en progreso (WIP) y mejorar la eficiencia del equipo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué es un caso de prueba?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Es un conjunto de condiciones, entradas y pasos diseñados para verificar si una funcionalidad específica del software opera de la manera esperada.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué es un bug?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Es un error, fallo o defecto en el código o diseño de un software que provoca un comportamiento inesperado o incorrecto en el sistema.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué diferencia hay entre los modelos tradicionales y las metodologías ágiles?</span>
+          <span class="faq-arrow">v</span>
+        </button>
+        <div class="faq-answer">
+          <p>Los modelos tradicionales planifican y estructuran todo el proyecto de forma rígida y secuencial desde el inicio, mientras que las metodologías ágiles son flexibles, iterativas y se adaptan constantemente a los cambios de requisitos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
+    <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <script src="gestion.js"></script>
+  <script src="recursos.js"></script>
+</body>
+</html>

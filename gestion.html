@@ -32,31 +32,32 @@
         <ul>
           <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
           <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
-          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
         </ul>
       </div>
 
       <div class="menu-col">
         <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
         <ul>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
         </ul>
 
         <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
         <ul>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
         </ul>
       </div>
 
       <div class="menu-col">
         <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
         <ul>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
         </ul>
       </div>
 
@@ -70,11 +71,6 @@
         <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
         <ul>
           <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
-        </ul>
-
-        <h3><i class="fa-solid fa-clipboard-question"></i> Encuestas</h3>
-        <ul>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Encuesta Metodológica</a></li>
         </ul>
       </div>
     </div>
@@ -239,6 +235,90 @@
           <p>Analiza el funcionamiento interno del software, teniendo en cuenta su lógica y estructura.</p>
           <button class="ver-mas-btn" id="btnCajaBlanca">Ver más</button>
         </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: HERRAMIENTAS DE CALIDAD -->
+    <div class="section-text-block green-heading" id="herramientas">
+      <h2>HERRAMIENTAS DE CALIDAD</h2>
+      <p>Conocé algunas herramientas utilizadas para gestionar pruebas, realizar el seguimiento de errores y analizar la calidad del software.</p>
+    </div>
+
+    <section class="section-wrapper">
+      <h3 class="group-title">CATEGORÍAS DE HERRAMIENTAS</h3>
+      
+      <div class="light-card wide-card tools-intro-card">
+        <div class="tool-summary-item">
+          <strong>Bug Trackers:</strong> Permiten registrar, organizar y hacer seguimiento de errores encontrados durante el desarrollo.
+        </div>
+        <div class="tool-summary-item">
+          <strong>Linters:</strong> Analizan el código para detectar errores, problemas de estilo o posibles mejoras.
+        </div>
+        <div class="tool-summary-item">
+          <strong>Test Management:</strong> Facilitan la planificación, organización y seguimiento de las pruebas de software.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrapper">
+      <div class="light-card wide-card tools-filter-container">
+        
+        <!-- Botones de Filtrado -->
+        <div class="buttons-row tools-filter-buttons">
+          <button class="iso-btn active" data-filter="all">Todas</button>
+          <button class="iso-btn" data-filter="bug-trackers">Bug Trackers</button>
+          <button class="iso-btn" data-filter="linters">Linters</button>
+          <button class="iso-btn" data-filter="test-management">Test Management</button>
+        </div>
+
+        <!-- Tarjeta de Bug Trackers -->
+        <div class="tool-category-card green-card" data-category="bug-trackers">
+          <div class="tool-cat-header">
+            <i class="fa-solid fa-bug"></i>
+            <h4>Bug Trackers</h4>
+          </div>
+          <div class="tool-item">
+            <h5>JIRA</h5>
+            <p>Permite registrar, organizar y realizar el seguimiento de errores y tareas durante el desarrollo de un proyecto.<br>Ayuda al equipo a controlar los problemas encontrados y conocer su estado, por ejemplo: pendiente, en proceso o resuelto.</p>
+          </div>
+          <div class="tool-item">
+            <h5>BUGZILLA</h5>
+            <p>Herramienta destinada al registro y seguimiento de errores encontrados en un sistema.<br>Permite asignar errores, agregar información y realizar un seguimiento hasta su resolución.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Linters -->
+        <div class="tool-category-card green-card" data-category="linters">
+          <div class="tool-cat-header">
+            <i class="fa-solid fa-code-check"></i>
+            <h4>Linters</h4>
+          </div>
+          <div class="tool-item">
+            <h5>ESLINT</h5>
+            <p>Analiza el código para detectar errores, problemas de escritura y posibles mejoras.<br>Se utiliza principalmente con JavaScript y ayuda a mantener un código más ordenado y consistente.</p>
+          </div>
+          <div class="tool-item">
+            <h5>STYLELINT</h5>
+            <p>Analiza archivos CSS para detectar errores y problemas relacionados con la escritura del código.<br>Permite encontrar problemas de estilo y mantener reglas de formato dentro de un proyecto.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Test Management -->
+        <div class="tool-category-card green-card" data-category="test-management">
+          <div class="tool-cat-header">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h4>Test Management</h4>
+          </div>
+          <div class="tool-item">
+            <h5>TESTRAIL</h5>
+            <p>Permite organizar, gestionar y realizar el seguimiento de casos y actividades de prueba.<br>Ayuda a planificar las pruebas y registrar sus resultados para conocer qué casos fueron ejecutados y cuáles necesitan atención.</p>
+          </div>
+          <div class="tool-item">
+            <h5>ZEPHYR</h5>
+            <p>Herramienta para planificar y administrar pruebas de software dentro de un proyecto.<br>Permite organizar casos de prueba, controlar su ejecución y realizar un seguimiento de los resultados.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 

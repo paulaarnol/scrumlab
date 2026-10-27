@@ -262,3 +262,27 @@ flipCards.forEach(card => {
     card.classList.toggle('flipped');
   });
 });
+// --- LÓGICA DE FILTRADO DE HERRAMIENTAS DE CALIDAD ---
+const filterButtons = document.querySelectorAll('.tools-filter-buttons .iso-btn');
+const toolCategoryCards = document.querySelectorAll('.tool-category-card');
+
+if (filterButtons.length > 0 && toolCategoryCards.length > 0) {
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Actualizar botón activo
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      toolCategoryCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filterValue === 'all' || filterValue === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}

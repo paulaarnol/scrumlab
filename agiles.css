@@ -1,0 +1,544 @@
+/* =========================================================
+   ESTILOS COMPLETOS Y OPTIMIZADOS - METODOLOGÍAS ÁGILES (agiles.css)
+   ========================================================= */
+
+/* Corrección de espaciado superior para evitar que la barra de navegación tape el contenido */
+.page-container {
+  padding-top: 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* =========================================================
+   ESTILO DEL BOTÓN "VOLVER AL INICIO" (UBICADO MÁS A LA DERECHA)
+   ========================================================= */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: #7ed957;
+  border: none;
+  padding: 0.5rem 0;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  margin-left: 4rem; /* <--- Ajusta este valor (ej. 2rem, 4rem o píxeles) según qué tan a la derecha lo quieras */
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #96e673;
+  transform: translateX(-4px);
+}
+
+.hero-card-agiles {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+}
+
+/* Estilo y visibilidad del título principal */
+.main-title-glow {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 
+    0 0 8px rgba(126, 217, 87, 0.8),
+    0 0 20px rgba(126, 217, 87, 0.5),
+    -1px -1px 0 #7ed957,
+     1px -1px 0 #7ed957,
+    -1px  1px 0 #7ed957,
+     1px  1px 0 #7ed957;
+  margin: 0 auto 1.2rem auto;
+  line-height: 1.2;
+}
+
+/* Centrado global para títulos de sección */
+.green-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.green-heading h2 {
+  text-align: center !important;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #7ed957;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-intro-box {
+  margin-bottom: 1.5rem;
+  background: #f4efdf;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  color: #122a1a;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nav-buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.agile-nav-btn {
+  background: #7ed957;
+  color: #071f13;
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(126, 217, 87, 0.3);
+  transition: all 0.3s ease;
+}
+
+.agile-nav-btn:hover {
+  transform: translateY(-2px);
+  background: #96e673;
+}
+
+/* =========================================================
+   MANIFIESTO ÁGIL (VALORES Y PRINCIPIOS)
+   ========================================================= */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.value-card {
+  background: #f4efdf;
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  color: #122a1a;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.value-card:hover {
+  border-color: #7ed957;
+  transform: translateY(-2px);
+}
+
+.value-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.value-icon {
+  font-size: 1.5rem;
+  color: #235431;
+  margin-top: 2px;
+}
+
+.value-card h3 {
+  font-size: 0.98rem;
+  font-weight: 900;
+  color: #092113;
+  margin-bottom: 0.2rem;
+}
+
+.value-card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #1a3826;
+}
+
+.value-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  background: rgba(126, 217, 87, 0.15);
+  border-radius: 8px;
+  padding: 0 0.6rem;
+}
+
+.value-card.open .value-detail {
+  max-height: 100px;
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  font-size: 0.82rem;
+}
+
+.principles-box {
+  background: #f4efdf;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  color: #122a1a;
+  max-width: 950px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.principles-box h3 {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #0c2b18;
+  margin-bottom: 0.4rem;
+}
+
+.ver-mas-btn {
+  background: transparent;
+  border: none;
+  color: #1b4d27;
+  font-weight: 800;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.principles-list {
+  text-align: left;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 2px solid #a8cbb1;
+}
+
+.principles-list ol {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #183623;
+}
+
+/* =========================================================
+   MARCOS DE METODOLOGÍAS (SCRUM, KANBAN, XP)
+   ========================================================= */
+
+.green-frame-card {
+  background: #7cae63;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  color: #071f13;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  margin-bottom: 2.5rem;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frame-header h2 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+  color: #071f13;
+}
+
+.frame-header p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.diagram-container {
+  background: #f4efdf;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.diagram-container h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #122a1a;
+  margin-bottom: 0.8rem;
+}
+
+/* AJUSTE PARA QUE NINGUNA IMAGEN SE SALGA DE LA TARJETA */
+.agile-image-frame {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.process-diagram-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.xp-practices-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.xp-card {
+  background: #e5edd8;
+  border: 1px solid #7ed957;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  width: min(100%, 200px);
+  text-align: left;
+}
+
+.xp-card h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0d2b1a;
+  margin-bottom: 0.2rem;
+}
+
+.xp-card p {
+  font-size: 0.78rem;
+  color: #1a3826;
+  line-height: 1.3;
+}
+
+/* BOTONES PESTAÑAS (TABS) */
+.tab-buttons {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: #092113;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.4rem;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: #04120a;
+}
+
+.tab-content-container {
+  background: rgba(7, 31, 19, 0.15);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  color: #071f13;
+}
+
+.tab-pane {
+  display: none;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.tab-pane p {
+  margin-bottom: 0.4rem;
+}
+
+/* =========================================================
+   SCRUM A PROFUNDIDAD
+   ========================================================= */
+
+.scrum-deep-container {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 950px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.scrum-deep-card {
+  background: #071f13;
+  border: 1px solid rgba(126, 217, 87, 0.3);
+  border-radius: 14px;
+  padding: 1.4rem 1rem 1rem 1rem;
+  width: 170px;
+  min-height: 180px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.scrum-deep-card:hover, .scrum-deep-card.active-card {
+  border-color: #7ed957;
+  transform: translateY(-3px);
+}
+
+
+.scrum-deep-card h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  text-transform: capitalize;
+}
+
+.summary-text {
+  font-size: 0.72rem;
+  color: #7ed957;
+}
+
+.expanded-info {
+  display: none;
+  font-size: 0.78rem;
+  color: #d1ebd8;
+  line-height: 1.3;
+  margin-top: 0.6rem;
+}
+
+.scrum-deep-card.open .expanded-info {
+  display: block;
+}
+
+.scrum-deep-card.open .summary-text {
+  display: none;
+}
+
+/* =========================================================
+   KANBAN A PROFUNDIDAD
+   ========================================================= */
+
+.kanban-interactive-wrapper {
+  background: #f4efdf;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  max-width: 950px;
+  margin: 0 auto 3rem auto;
+}
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.kanban-column {
+  background: #071f13;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-column h3 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.4rem;
+}
+
+.kanban-cards-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.kanban-task-card {
+  background: #7ed957;
+  color: #071f13;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: grab;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  user-select: none;
+}
+
+.kanban-task-card:active {
+  cursor: grabbing;
+}
+
+.kanban-status-info {
+  background: #ffffff;
+  border-left: 4px solid #7ed957;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  color: #122a1a;
+}
+
+.kanban-status-info h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  color: #071f13;
+}
+
+.kanban-status-info p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #21402c;
+}
+
+/* Responsivo para pantallas móviles */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+  .scrum-deep-card {
+    width: 100%;
+  }
+}
+#sdlc,
+#kanban-profundidad {
+  scroll-margin-top: 100px;
+}
+#sdlc,
+#scrum-profundidad {
+  scroll-margin-top: 100px;
+}

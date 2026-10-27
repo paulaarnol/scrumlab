@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodologías Ágiles - SCRUM LAB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="agiles.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mega Menú Desplegable -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html#scrum-profundidad"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html#kanban-profundidad"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-container">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <!-- HERO DE METODOLOGÍAS ÁGILES -->
+    <section class="hero-card-agiles">
+      <h1 class="main-title-glow">METODOLOGÍAS ÁGILES</h1>
+    </section>
+
+    <div class="light-card wide-card text-center-card hero-intro-box">
+      <p>Las metodologías ágiles permiten organizar el desarrollo de software de manera flexible, colaborativa y adaptable a los cambios. En esta sección vas a conocer Scrum, Kanban y Extreme Programming (XP), junto con sus principios y prácticas principales.</p>
+    </div>
+
+    <!-- NAVEGACIÓN RÁPIDA ENTRE SECCIONES -->
+    <div class="nav-buttons-row">
+      <a href="#manifiesto" class="agile-nav-btn">Manifiesto ágil</a>
+      <a href="#scrum-section" class="agile-nav-btn">Scrum</a>
+      <a href="#kanban-section" class="agile-nav-btn">Kanban</a>
+      <a href="#xp-section" class="agile-nav-btn">XP</a>
+    </div>
+
+    <!-- SECCIÓN: MANIFIESTO ÁGIL -->
+    <section id="manifiesto" class="section-wrapper">
+      <div class="green-heading">
+        <h2>MANIFIESTO ÁGIL: SUS VALORES Y PRINCIPIOS</h2>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card" onclick="toggleValueDetail(this)">
+          <div class="value-card-header">
+            <i class="fa-solid fa-users value-icon"></i>
+            <div>
+              <h3>PERSONAS E INTERACCIONES</h3>
+              <p>Se prioriza la comunicación y colaboración entre las personas sobre los procesos y herramientas.</p>
+            </div>
+          </div>
+          <div class="value-detail">
+            <p><strong>Detalle:</strong> La interacción constante en el equipo resuelve problemas más rápido que depender únicamente de procesos rígidos o herramientas complejas.</p>
+          </div>
+        </div>
+
+        <div class="value-card" onclick="toggleValueDetail(this)">
+          <div class="value-card-header">
+            <i class="fa-solid fa-laptop-code value-icon"></i>
+            <div>
+              <h3>SOFTWARE FUNCIONANDO</h3>
+              <p>Se valora obtener resultados funcionales por encima de la documentación exhaustiva.</p>
+            </div>
+          </div>
+          <div class="value-detail">
+            <p><strong>Detalle:</strong> La documentación es útil, pero la prueba definitiva de progreso es entregar versiones de software funcionales que aporten valor real.</p>
+          </div>
+        </div>
+
+        <div class="value-card" onclick="toggleValueDetail(this)">
+          <div class="value-card-header">
+            <i class="fa-solid fa-handshake value-icon"></i>
+            <div>
+              <h3>COLABORACIÓN CON EL CLIENTE</h3>
+              <p>Se trabaja en conjunto para lograr un producto útil por encima de la negociación contractual.</p>
+            </div>
+          </div>
+          <div class="value-detail">
+            <p><strong>Detalle:</strong> Trabajar en alianza estrecha con el cliente permite alinear el producto final con las necesidades cambiantes en tiempo real.</p>
+          </div>
+        </div>
+
+        <div class="value-card" onclick="toggleValueDetail(this)">
+          <div class="value-card-header">
+            <i class="fa-solid fa-arrows-rotate value-icon"></i>
+            <div>
+              <h3>RESPUESTA AL CAMBIO</h3>
+              <p>Se busca adaptar el desarrollo a nuevas necesidades por encima de seguir un plan estricto.</p>
+            </div>
+          </div>
+          <div class="value-detail">
+            <p><strong>Detalle:</strong> La agilidad abraza los cambios como oportunidades de mejora en lugar de verlos como imprevistos u obstáculos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 12 PRINCIPIOS -->
+      <div class="light-card principles-box">
+        <h3>LOS 12 PRINCIPIOS DEL MANIFIESTO ÁGIL</h3>
+        <button id="togglePrinciplesBtn" class="ver-mas-btn">VER MÁS</button>
+        <div id="principlesContent" class="principles-list" style="display: none;">
+          <ol>
+            <li>Satisfacer al cliente mediante la entrega temprana y continua de software con valor.</li>
+            <li>Aceptar que los requisitos cambien, incluso en etapas tardías del desarrollo.</li>
+            <li>Entregar software funcional frecuentemente, entre pocas semanas y un par de meses.</li>
+            <li>El equipo de desarrollo y los responsables del negocio deben trabajar juntos diariamente.</li>
+            <li>Construir proyectos en torno a individuos motivados y darles el entorno necesario.</li>
+            <li>El método más eficiente de comunicar información es la conversación cara a cara.</li>
+            <li>El software funcionando es la medida principal de progreso.</li>
+            <li>Los procesos ágiles promueven el desarrollo sostenible a un ritmo constante.</li>
+            <li>La atención continua a la excelencia técnica y al buen diseño mejora la agilidad.</li>
+            <li>La simplicidad, o el arte de maximizar la cantidad de trabajo no realizado, es esencial.</li>
+            <li>Las mejores arquitecturas, requisitos y diseños emergen de equipos autoorganizados.</li>
+            <li>A intervalos regulares, el equipo reflexiona sobre cómo ser más eficaz para ajustar su comportamiento.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SCRUM -->
+    <section id="scrum-section" class="section-wrapper green-frame-card">
+      <div class="frame-header">
+        <h2>Scrum:</h2>
+        <p>Scrum organiza el trabajo en períodos llamados sprints, durante los cuales el equipo busca alcanzar un objetivo y producir un incremento del producto.</p>
+      </div>
+
+      <div class="diagram-container">
+        <h3>MARCO DE TRABAJO SCRUM</h3>
+        <div class="agile-image-frame">
+          <img src="imagenes/marco-trabajo-scrum.png" alt="Marco de trabajo Scrum" class="process-diagram-image" onerror="this.src='https://via.placeholder.com/700x320/e8f4ec/122a1a?text=Diagrama+Marco+de+Trabajo+Scrum'">
+        </div>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('scrum', 'roles', this)">Roles</button>
+        <button class="tab-btn" onclick="showTab('scrum', 'eventos', this)">Eventos/Ceremonias</button>
+        <button class="tab-btn" onclick="showTab('scrum', 'artefactos', this)">Artefactos</button>
+      </div>
+
+      <div class="tab-content-container">
+        <div id="scrum-roles" class="tab-pane active">
+          <p><strong>Scrum Master:</strong> Es el encargado de organizar el trabajo del equipo, coordinar las reuniones, mantener actualizado el tablero de tareas y ayudar a resolver obstáculos.</p>
+          <p><strong>Diseñador / Product Owner:</strong> Define la visión del producto, prioriza los elementos del Backlog y asegura que el equipo entregue valor al cliente.</p>
+          <p><strong>Programador / Equipo de Desarrollo:</strong> Desarrolla la estructura y las funcionalidades del sitio web transformando los requisitos en incrementos funcionales.</p>
+          <p><strong>Tester / QA:</strong> Comprueba la calidad del software mediante pruebas para detectar errores de funcionamiento y problemas de diseño.</p>
+        </div>
+        <div id="scrum-eventos" class="tab-pane">
+          <p><strong>Sprint Planning:</strong> Reunión inicial donde se define el objetivo del Sprint y se seleccionan las tareas a desarrollar.</p>
+          <p><strong>Daily Scrum:</strong> Reunión diaria de 15 minutos para sincronizar actividades y detectar bloqueos.</p>
+          <p><strong>Sprint Review:</strong> Demostración del incremento terminado a los interesados al final del Sprint.</p>
+          <p><strong>Sprint Retrospective:</strong> Evaluación interna del equipo para identificar mejoras en el proceso de trabajo.</p>
+        </div>
+        <div id="scrum-artefactos" class="tab-pane">
+          <p><strong>Product Backlog:</strong> Lista priorizada de todas las características, funciones y requisitos del proyecto.</p>
+          <p><strong>Sprint Backlog:</strong> Conjunto de elementos del Product Backlog seleccionados para ser completados en el Sprint actual.</p>
+          <p><strong>Incremento:</strong> La suma de todos los elementos completados durante un Sprint que cumplen la definición de "Hecho".</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: KANBAN -->
+    <section id="kanban-section" class="section-wrapper green-frame-card">
+      <div class="frame-header">
+        <h2>Kanban:</h2>
+        <p>Kanban es un método de gestión visual que permite organizar tareas, conocer su estado y detectar dificultades en el flujo de trabajo.</p>
+      </div>
+
+      <div class="diagram-container">
+        <div class="agile-image-frame">
+          <img src="imagenes/tablero-kanban.png" alt="Tablero Kanban" class="process-diagram-image" onerror="this.src='https://via.placeholder.com/700x320/e8f4ec/122a1a?text=Diagrama+Tablero+Kanban'">
+        </div>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('kanban', 'roles', this)">Roles</button>
+        <button class="tab-btn" onclick="showTab('kanban', 'eventos', this)">Eventos/Ceremonias</button>
+        <button class="tab-btn" onclick="showTab('kanban', 'artefactos', this)">Artefactos</button>
+      </div>
+
+      <div class="tab-content-container">
+        <div id="kanban-roles" class="tab-pane active">
+          <p>Kanban no impone roles rígidos predefinidos; cada miembro del equipo asume responsabilidades según el flujo de trabajo.</p>
+        </div>
+        <div id="kanban-eventos" class="tab-pane">
+          <p><strong>Reuniones de Cadencia:</strong> Revisiones del flujo de trabajo y reuniones diarias de stand-up para analizar el estado de las tarjetas en el tablero.</p>
+        </div>
+        <div id="kanban-artefactos" class="tab-pane">
+          <p><strong>Tablero Kanban:</strong> Herramienta visual dividida en columnas (Por Hacer, En Proceso, Hecho) que refleja el estado real del trabajo.</p>
+          <p><strong>Límites WIP:</strong> Restricciones explícitas en el número máximo de tareas simultáneas por columna.</p>
+        </div>
+      </div>
+    </section>
+
+<!-- SECCIÓN: XP -->
+    <section id="xp-section" class="section-wrapper green-frame-card">
+      <div class="frame-header">
+        <h2>XP:</h2>
+        <p>XP se enfoca en mejorar la calidad del software mediante prácticas técnicas, colaboración y retroalimentación frecuente.</p>
+      </div>
+
+      <div class="diagram-container">
+        <div class="agile-image-frame">
+          <img src="imagenes/practicas-clave-xp.png" alt="Prácticas clave de Extreme Programming (XP)" class="process-diagram-image" onerror="this.src='https://via.placeholder.com/700x320/e8f4ec/122a1a?text=Diagrama+Prácticas+XP'">
+        </div>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('xp', 'roles', this)">Roles</button>
+        <button class="tab-btn" onclick="showTab('xp', 'eventos', this)">Eventos/Ceremonias</button>
+        <button class="tab-btn" onclick="showTab('xp', 'artefactos', this)">Artefactos</button>
+      </div>
+
+      <div class="tab-content-container">
+        <div id="xp-roles" class="tab-pane active">
+          <p><strong>Programadores:</strong> Responsables del diseño, pruebas y desarrollo en parejas.</p>
+          <p><strong>Cliente en sitio:</strong> Integrante del equipo encargado de definir los requisitos y validar los avances diariamente.</p>
+          <p><strong>Coach:</strong> Guía al equipo en el cumplimiento de las prácticas técnicas XP.</p>
+        </div>
+        <div id="xp-eventos" class="tab-pane">
+          <p><strong>Juego de la Planificación:</strong> Definición de lanzamientos e iteraciones entre el cliente y el equipo técnico.</p>
+          <p><strong>Stand-up Meeting:</strong> Breve reunión diaria para coordinar el trabajo en pareja.</p>
+        </div>
+        <div id="xp-artefactos" class="tab-pane">
+          <p><strong>Historias de Usuario:</strong> Tarjetas breves escritas por el cliente que describen la funcionalidad esperada.</p>
+          <p><strong>Pruebas Automatizadas:</strong> Conjunto de tests que garantizan que el código no sufra regresiones.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SCRUM A PROFUNDIDAD -->
+    <section id="scrum-profundidad" class="section-wrapper">
+      <div class="green-heading">
+        <h2>SCRUM A PROFUNDIDAD</h2>
+      </div>
+
+      <div class="scrum-deep-container">
+        <div class="scrum-deep-card" onclick="expandScrumCard(this)">
+          <h4>Pila de producto</h4>
+          <p class="summary-text">Click para ver más...</p>
+          <div class="expanded-info">
+            <p>Es el listado dinámico y priorizado de todas las funcionalidades, mejoras y correcciones requeridas en el producto. El Product Owner se encarga de mantenerlo actualizado.</p>
+          </div>
+        </div>
+
+        <div class="scrum-deep-card" onclick="expandScrumCard(this)">
+          <h4>Pila del sprint</h4>
+          <p class="summary-text">Click para ver más...</p>
+          <div class="expanded-info">
+            <p>Es el conjunto de tareas seleccionadas de la Pila de Producto que el equipo se compromete a completar durante el Sprint actual.</p>
+          </div>
+        </div>
+
+        <div class="scrum-deep-card active-card" onclick="expandScrumCard(this)">
+          
+          <h4>Sprint</h4>
+          <p class="summary-text">Click para ver más...</p>
+          <div class="expanded-info">
+            <p>Es el corazón de Scrum: un contenedor de tiempo fijo (usualmente de 1 a 4 semanas) durante el cual se crea un incremento de producto terminado y utilizable.</p>
+          </div>
+        </div>
+
+        <div class="scrum-deep-card" onclick="expandScrumCard(this)">
+          <h4>Scrum diario</h4>
+          <p class="summary-text">Click para ver más...</p>
+          <div class="expanded-info">
+            <p>Una reunión de 15 minutos en la que el equipo evalúa el progreso hacia el Objetivo del Sprint, sincroniza las tareas y detecta bloqueos.</p>
+          </div>
+        </div>
+
+        <div class="scrum-deep-card" onclick="expandScrumCard(this)">
+          <h4>Retrospectiva del sprint</h4>
+          <p class="summary-text">Click para ver más...</p>
+          <div class="expanded-info">
+            <p>Reunión al finalizar el Sprint donde el equipo inspecciona su forma de trabajar para planificar mejoras continuas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: KANBAN A PROFUNDIDAD (TABLERO DRAG & DROP) -->
+    <section id="kanban-profundidad" class="section-wrapper">
+      <div class="green-heading">
+        <h2>KANBAN A PROFUNDIDAD</h2>
+      </div>
+
+      <div class="kanban-interactive-wrapper">
+        <div class="kanban-board">
+          
+          <!-- COLUMNA 1: POR HACER -->
+          <div class="kanban-column" data-status="POR HACER" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h3>POR HACER</h3>
+            <div class="kanban-cards-container">
+              <div class="kanban-task-card" draggable="true" ondragstart="drag(event)" id="task-1" data-task="Diseño" data-desc="Fase de conceptualización de la interfaz y maquetación de wireframes.">
+                1. Diseño
+              </div>
+              <div class="kanban-task-card" draggable="true" ondragstart="drag(event)" id="task-2" data-task="Programación" data-desc="Escritura del código HTML, CSS y JavaScript para dar funcionalidad al sitio web.">
+                2. Programación
+              </div>
+              <div class="kanban-task-card" draggable="true" ondragstart="drag(event)" id="task-3" data-task="Pruebas" data-desc="Ejecución de casos de prueba para garantizar la calidad y usabilidad.">
+                3. Pruebas
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA 2: EN PROCESO -->
+          <div class="kanban-column" data-status="EN PROCESO" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h3>EN PROCESO</h3>
+            <div class="kanban-cards-container">
+              <!-- Tarjetas soltadas aquí -->
+            </div>
+          </div>
+
+          <!-- COLUMNA 3: HECHO -->
+          <div class="kanban-column" data-status="HECHO" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h3>HECHO</h3>
+            <div class="kanban-cards-container">
+              <!-- Tarjetas completadas -->
+            </div>
+          </div>
+
+        </div>
+
+        <div class="kanban-status-info" id="kanbanStatusInfo">
+          <h4 id="statusTitle">ESTADO DEL TRABAJO</h4>
+          <p id="statusDescription">Arrastra y suelta cualquiera de las tarjetas (Diseño, Programación, Pruebas) entre las columnas para cambiar su estado en el flujo de trabajo.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <h2>SCRUM LAB</h2>
+    <p>Calidad del software, procesos de desarrollo y metodologías ágiles.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <script src="gestion.js"></script>
+  <script src="agiles.js"></script>
+</body>
+</html>

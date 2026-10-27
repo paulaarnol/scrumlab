@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procesos de Desarrollo - SCRUM LAB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gestion.css">
+  <link rel="stylesheet" href="procesos.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mega Menú Desplegable -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <main class="page-container">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <!-- HERO / TÍTULO PRINCIPAL -->
+    <section class="hero-card-procesos">
+      <h1 class="main-title-glow">PROCESOS DE DESARROLLO DE SOFTWARE</h1>
+    </section>
+
+    <!-- SDLC SECTION -->
+    <section class="section-wrapper" id="sdlc">
+      <div class="light-card wide-card text-center-card" style="margin-bottom: 2rem;">
+        <h3>Ciclo de Vida del Desarrollo de Software (SDLC)</h3>
+        <p>El Ciclo de Vida del Desarrollo de Software organiza las actividades necesarias para construir y mantener un sistema. Cada etapa cumple una función específica y permite avanzar de manera ordenada hacia un producto de software funcional y de calidad.</p>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="sdlc-timeline">
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>01. Requisitos</h4>
+            <p>Se identifican las necesidades, problemas y requisitos que debe cumplir el software. Se define qué se necesita desarrollar y cuáles son los objetivos del sistema.</p>
+            <div class="importance-box">
+              <strong>¿Por qué es importante?</strong>
+              <p>Permite definir qué debe hacer el sistema antes de comenzar su desarrollo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>02. Diseño</h4>
+            <p>Se define cómo estará construido el software, estableciendo su estructura, componentes, funcionamiento y organización.</p>
+            <div class="importance-box">
+              <strong>¿Por qué es importante?</strong>
+              <p>Sirve como guía para construir el software de acuerdo con los requisitos establecidos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>03. Desarrollo</h4>
+            <p>Se desarrolla el software mediante la escritura del código, transformando el diseño en un sistema funcional.</p>
+            <div class="importance-box">
+              <strong>¿Por qué es importante?</strong>
+              <p>Sirve como guía para construir el software de acuerdo con los requisitos establecidos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>04. Pruebas</h4>
+            <p>Se comprueba que el software funcione correctamente y que cumpla con los requisitos establecidos. También se buscan y corrigen errores.</p>
+            <div class="importance-box">
+              <strong>¿Por qué es importante?</strong>
+              <p>Permite encontrar problemas antes de que el sistema llegue a los usuarios.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>05. Despliegue</h4>
+            <p>El software se instala y se pone en funcionamiento en el entorno donde será utilizado por los usuarios.</p>
+            <div class="importance-box">
+              <strong>¿Por qué es importante?</strong>
+              <p>Permite que el sistema pueda comenzar a utilizarse.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>06. Mantenimiento</h4>
+            <p>Se realizan correcciones, actualizaciones y mejoras para mantener el software funcionando y adaptarlo a nuevas necesidades.</p>
+            <div class="importance-box">
+              <strong>¿Por qué es importante?</strong>
+              <p>Permite mantener el sistema funcionando correctamente y adaptarlo a nuevas necesidades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODELOS TRADICIONALES INTERACTIVOS -->
+    <div class="section-text-block green-heading" id="modelos-tradicionales">
+      <h2>MODELOS TRADICIONALES</h2>
+    </div>
+
+    <section class="section-wrapper">
+      <div class="light-card wide-card text-center-card" style="margin-bottom: 1.5rem;">
+        <p>Los modelos tradicionales permiten organizar y planificar el desarrollo de software mediante diferentes formas de trabajo. Cada modelo establece una manera particular de ordenar las etapas del desarrollo y puede resultar más adecuado según las características del proyecto.</p>
+      </div>
+
+      <div class="light-card wide-card models-filter-container">
+        <!-- Filter Buttons -->
+        <div class="buttons-row models-filter-buttons">
+          <button class="iso-btn active" data-model="cascada">Modelo en Cascada</button>
+          <button class="iso-btn" data-model="v">Modelo en V</button>
+          <button class="iso-btn" data-model="iterativo">Modelo Iterativo e Incremental</button>
+        </div>
+
+        <!-- Modelo Cascada Box -->
+        <div class="model-detail-card" id="model-cascada">
+          <h4 class="model-title">Modelo Cascada</h4>
+          <div class="model-block">
+            <h5 class="sub-heading">¿Qué es?</h5>
+            <p>Es un modelo en el que el desarrollo se organiza en etapas consecutivas. Cada etapa se completa antes de avanzar a la siguiente.</p>
+          </div>
+          <div class="pros-cons-grid">
+            <div class="pros-box">
+              <h6>Ventajas:</h6>
+              <ul>
+                <li>Es sencillo de comprender y organizar.</li>
+                <li>Permite planificar las etapas desde el comienzo.</li>
+                <li>Cada etapa tiene objetivos claramente definidos.</li>
+                <li>Facilita la documentación del proyecto.</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h6>Desventajas:</h6>
+              <ul>
+                <li>Es difícil volver a etapas anteriores una vez avanzadas.</li>
+                <li>Los cambios pueden resultar costosos.</li>
+                <li>Los errores pueden descubrirse recién en etapas posteriores.</li>
+                <li>No es adecuado cuando los requisitos cambian frecuentemente.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="model-block">
+            <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
+            <p>Es conveniente cuando los requisitos están bien definidos desde el inicio y se espera que sufran pocos cambios durante el desarrollo.</p>
+          </div>
+        </div>
+
+        <!-- Modelo en V Box -->
+        <div class="model-detail-card" id="model-v" style="display: none;">
+          <h4 class="model-title">Modelo en V</h4>
+          <div class="model-block">
+            <h5 class="sub-heading">¿Qué es?</h5>
+            <p>Es un modelo basado en etapas secuenciales que relaciona cada fase de desarrollo con una etapa específica de pruebas y validación.</p>
+          </div>
+          <div class="pros-cons-grid">
+            <div class="pros-box">
+              <h6>Ventajas:</h6>
+              <ul>
+                <li>Da importancia a las pruebas desde las primeras etapas.</li>
+                <li>Facilita la planificación y organización.</li>
+                <li>Permite relacionar cada etapa con su correspondiente validación.</li>
+                <li>Favorece la detección temprana de errores.</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h6>Desventajas:</h6>
+              <ul>
+                <li>Es poco flexible frente a cambios en los requisitos.</li>
+                <li>Los cambios pueden ser costosos.</li>
+                <li>Requiere que los requisitos estén bastante definidos desde el comienzo.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="model-block">
+            <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
+            <p>Es útil cuando los requisitos son claros y se necesita un proceso organizado, con fuerte control y planificación de las pruebas.</p>
+          </div>
+        </div>
+
+        <!-- Modelo Iterativo e Incremental Box -->
+        <div class="model-detail-card" id="model-iterativo" style="display: none;">
+          <h4 class="model-title">Modelo Iterativo e Incremental</h4>
+          <div class="model-block">
+            <h5 class="sub-heading">¿Qué es?</h5>
+            <p>El software se desarrolla en diferentes ciclos o iteraciones. En cada una se construye y mejora una parte del sistema hasta obtener el producto completo.</p>
+          </div>
+          <div class="pros-cons-grid">
+            <div class="pros-box">
+              <h6>Ventajas:</h6>
+              <ul>
+                <li>Permite obtener versiones funcionales progresivamente.</li>
+                <li>Facilita incorporar cambios y mejoras.</li>
+                <li>Los usuarios pueden recibir resultados antes de finalizar todo el proyecto.</li>
+                <li>Permite detectar problemas durante las diferentes iteraciones.</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h6>Desventajas:</h6>
+              <ul>
+                <li>Requiere una buena planificación de cada iteración.</li>
+                <li>Puede aumentar la complejidad de la gestión del proyecto.</li>
+                <li>Las modificaciones constantes pueden afectar la organización del desarrollo.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="model-block">
+            <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
+            <p>Es adecuado cuando se necesita desarrollar el sistema progresivamente y existe la posibilidad de incorporar cambios o nuevos requisitos durante el proyecto.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ILUSTRACIONES DE MODELOS TRADICIONALES (ANCLAJE EXACTO PARA EL MENÚ) -->
+    <div class="section-text-block green-heading" id="ilustraciones-tradicionales">
+      <h2>Ilustraciones de Modelos Tradicionales</h2>
+    </div>
+
+    <section class="section-wrapper">
+      
+      <!-- Las imágenes se pueden reemplazar/subir con estos nombres dentro de /imagenes -->
+      <div class="light-card diagram-illustration-card image-diagram-card">
+        <h4 class="diagram-title">Modelo Cascada</h4>
+        <img src="imagenes/modelo-cascada.png" alt="Ilustración del modelo en cascada" class="process-diagram-image">
+        <p class="diagram-caption">El desarrollo avanza secuencialmente de una etapa a la siguiente.</p>
+      </div>
+      <div class="light-card diagram-illustration-card image-diagram-card">
+        <h4 class="diagram-title">Modelo en V</h4>
+        <img src="imagenes/modelo-v.png" alt="Ilustración del modelo en V con etapas de desarrollo y validación" class="process-diagram-image">
+        <p class="diagram-caption">Cada etapa de desarrollo se relaciona con actividades de verificación y validación.</p>
+      </div>
+      <div class="light-card diagram-illustration-card image-diagram-card">
+        <h4 class="diagram-title">Modelo iterativo e incremental</h4>
+        <img src="imagenes/modelo-iterativo-incremental.png" alt="Ilustración del modelo iterativo e incremental" class="process-diagram-image">
+        <p class="diagram-caption">El software se construye progresivamente mediante iteraciones e incrementos.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <h2>SCRUM LAB</h2>
+    <p>Calidad del software, procesos de desarrollo y metodologías ágiles.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <script src="gestion.js"></script>
+  <script src="procesos.js"></script>
+</body>
+</html>

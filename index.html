@@ -12,10 +12,8 @@
 </head>
 <body>
 
- 
   <canvas id="particles-canvas"></canvas>
 
-  
   <header class="navbar">
     <div class="logo-mini">
       <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
@@ -27,40 +25,39 @@
     </button>
   </header>
 
-  
   <div class="mega-menu" id="megaMenu">
     <div class="mega-menu-content">
-      
       <div class="menu-col">
         <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
         <ul>
           <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
           <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
-          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
         </ul>
       </div>
 
       <div class="menu-col">
         <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
         <ul>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
         </ul>
 
         <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
         <ul>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html#scrum-profundidad"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html#kanban-profundidad"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
         </ul>
       </div>
 
       <div class="menu-col">
         <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
         <ul>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
         </ul>
       </div>
 
@@ -73,21 +70,13 @@
 
         <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
         <ul>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
-        </ul>
-
-        <h3><i class="fa-solid fa-clipboard-question"></i> Encuestas</h3>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-angle-right"></i> Encuesta Metodológica</a></li>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
         </ul>
       </div>
-
     </div>
   </div>
 
-  
   <main class="main-container">
-    
     
     <section class="hero-section">
       <div class="main-logo-wrapper">
@@ -96,38 +85,40 @@
       <p class="subtitle">Conocé los conceptos, procesos y metodologías que permiten desarrollar software de calidad.</p>
     </section>
 
-    
     <h2 class="sections-title">EXPLORÁ TODAS LAS SECCIONES</h2>
 
-    
     <div class="sections-grid">
       
-      
-      <div class="card highlight-style">
-        <div class="card-header">
-          <i class="fa-solid fa-lightbulb"></i>
-          <h3>Metodologías ágiles</h3>
+      <!-- 1. Metodologías ágiles -->
+      <a href="agiles.html" class="card-link">
+        <div class="card highlight-style">
+          <div class="card-header">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Metodologías ágiles</h3>
+          </div>
+          <ul class="card-list">
+            <li>Scrum</li>
+            <li>Kanban</li>
+          </ul>
         </div>
-        <ul class="card-list">
-          <li>Scrum</li>
-          <li>Kanban</li>
-        </ul>
-      </div>
+      </a>
 
-      
-      <div class="card highlight-style">
-        <div class="card-header">
-          <i class="fa-solid fa-diagram-project"></i>
-          <h3>Procesos de desarrollo</h3>
+      <!-- 2. Procesos de desarrollo -->
+      <a href="procesos.html" class="card-link">
+        <div class="card highlight-style">
+          <div class="card-header">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3>Procesos de desarrollo</h3>
+          </div>
+          <ul class="card-list">
+            <li>Ciclo de Vida del Software</li>
+            <li>Modelos Tradicionales</li>
+            <li>Metodologías Ágiles</li>
+          </ul>
         </div>
-        <ul class="card-list">
-          <li>Ciclo de Vida del Software</li>
-          <li>Modelos Tradicionales</li>
-          <li>Metodologías Ágiles</li>
-        </ul>
-      </div>
+      </a>
 
-      
+      <!-- 3. Sistema de gestión de calidad -->
       <a href="gestion.html" class="card-link">
         <div class="card highlight-style">
           <div class="card-header">
@@ -142,21 +133,23 @@
         </div>
       </a>
 
-      
-      <div class="card highlight-style">
-        <div class="card-header">
-          <i class="fa-solid fa-book-open"></i>
-          <h3>Recursos y aprendizaje</h3>
+      <!-- 4. Recursos y aprendizaje -->
+      <a href="recursos.html" class="card-link">
+        <div class="card highlight-style">
+          <div class="card-header">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Recursos y aprendizaje</h3>
+          </div>
+          <ul class="card-list">
+            <li>Glosario</li>
+            <li>Preguntas Frecuentes</li>
+            <li>Enlaces de Interés</li>
+            <li>Ejercicios y Casos Prácticos</li>
+          </ul>
         </div>
-        <ul class="card-list">
-          <li>Glosario</li>
-          <li>Preguntas Frecuentes</li>
-          <li>Enlaces de Interés</li>
-          <li>Ejercicios y Casos Prácticos</li>
-        </ul>
-      </div>
+      </a>
 
-      
+      <!-- Encuesta de preferencias metodológicas -->
       <div class="card highlight-style">
         <div class="card-header">
           <i class="fa-solid fa-clipboard-check"></i>
@@ -165,7 +158,7 @@
         <p class="card-desc">Respondé algunas preguntas y obtené una sugerencia según las características de un proyecto.</p>
       </div>
 
-      
+      <!-- Comparador de metodologías -->
       <div class="card highlight-style">
         <div class="card-header">
           <i class="fa-solid fa-list-check"></i>
@@ -174,7 +167,7 @@
         <p class="card-desc">Compará las características de distintas metodologías.</p>
       </div>
 
-      
+      <!-- 5. Sobre nosotros -->
       <a href="nosotros.html" class="card-link full-width">
         <div class="card highlight-style horizontal-card">
           <div class="card-header-horizontal">
@@ -192,7 +185,6 @@
     </div>
   </main>
 
-  
   <footer class="footer-banner">
     <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
     <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
@@ -201,7 +193,6 @@
     </div>
   </footer>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
