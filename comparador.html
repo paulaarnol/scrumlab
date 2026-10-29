@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Metodologías - SCRUM LAB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gestion.css">
+  <link rel="stylesheet" href="comparador.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+<!-- Mega Menú Desplegable Ordenado -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html#enlaces-de-interes"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador de Metodologías</h3>
+        <ul>
+          <li><a href="comparador.html"><i class="fa-solid fa-angle-right"></i> Ir al Comparador</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-square-poll-vertical"></i> Encuesta de Preferencias</h3>
+        <ul>
+          <li><a href="encuesta.html"><i class="fa-solid fa-angle-right"></i> Ir a la Encuesta</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-container">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <section class="hero-card-procesos" style="margin-bottom: 1.5rem;">
+      <h1 class="main-title-glow">COMPARADOR DE METODOLOGÍAS</h1>
+    </section>
+
+    <!-- SECCIÓN 1: COMPARADOR INTERACTIVO DE METODOLOGÍAS -->
+    <section class="section-wrapper" style="margin-bottom: 3rem;">
+      <p style="text-align: center; color: #d1ebd8; font-weight: 600; margin-bottom: 1rem;">
+        Seleccioná al menos dos metodologías para comparar sus características.
+      </p>
+
+      <div class="comparator-card">
+        
+        <!-- Checkboxes de Selección (Vacíos al inicio) -->
+        <div class="checkboxes-grid">
+          <label class="check-label"><input type="checkbox" value="cascada"> Cascada</label>
+          <label class="check-label"><input type="checkbox" value="modeloV"> Modelo V</label>
+          <label class="check-label"><input type="checkbox" value="iterativo"> Iterativo e Incremental</label>
+          <label class="check-label"><input type="checkbox" value="scrum"> Scrum</label>
+          <label class="check-label"><input type="checkbox" value="kanban"> Kanban</label>
+          <label class="check-label"><input type="checkbox" value="xp"> XP</label>
+        </div>
+
+        <!-- Contenedor dinámico de la Tabla o Advertencia -->
+        <div id="comparatorContentWrapper">
+          <!-- Se inyecta mediante JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <h2>SCRUM LAB</h2>
+    <p>Calidad del software, procesos de desarrollo y metodologías ágiles.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <script src="gestion.js"></script>
+  <script src="comparador.js"></script>
+</body>
+</html>

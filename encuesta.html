@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta de Preferencias - SCRUM LAB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gestion.css">
+  <link rel="stylesheet" href="encuesta.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-mini-link">
+      <div class="logo-mini">
+        <img src="imagenes/logoheader.png" alt="Logo Scrum Lab Mini" class="header-logo-img">
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mega Menú Desplegable -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-content">
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-shield-halved"></i> Gestión de la Calidad</h3>
+        <ul>
+          <li><a href="gestion.html"><i class="fa-solid fa-angle-right"></i> Fundamentos</a></li>
+          <li><a href="gestion.html#aseguramiento"><i class="fa-solid fa-angle-right"></i> Técnicas de Aseguramiento</a></li>
+          <li><a href="gestion.html#herramientas"><i class="fa-solid fa-angle-right"></i> Herramientas de Calidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-diagram-project"></i> Procesos de Desarrollo</h3>
+        <ul>
+          <li><a href="procesos.html"><i class="fa-solid fa-angle-right"></i> Ciclo de Vida del Software</a></li>
+          <li><a href="procesos.html#modelos-tradicionales"><i class="fa-solid fa-angle-right"></i> Modelos Tradicionales</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-bolt"></i> Metodologías Ágiles</h3>
+        <ul>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum, Kanban, XP</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Scrum a Profundidad</a></li>
+          <li><a href="agiles.html"><i class="fa-solid fa-angle-right"></i> Kanban a Profundidad</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Recursos y Aprendizaje</h3>
+        <ul>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
+          <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
+          <li><a href="recursos.html#enlaces-de-interes"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-col">
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador de Metodologías</h3>
+        <ul>
+          <li><a href="comparador.html"><i class="fa-solid fa-angle-right"></i> Ir al Comparador</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-square-poll-vertical"></i> Encuesta de Preferencias</h3>
+        <ul>
+          <li><a href="encuesta.html"><i class="fa-solid fa-angle-right"></i> Ir a la Encuesta</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
+        <ul>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
+          <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-container">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <div class="section-text-block green-heading" style="margin-top: 1rem;">
+      <h2>ENCUESTA DE PREFERENCIAS METODOLÓGICAS</h2>
+      <p style="text-align: center; color: #d1ebd8; font-size: 0.95rem; margin-top: 0.5rem;">
+        Respondé estas preguntas sobre tu proyecto para descubrir qué metodología se adapta mejor a tus necesidades. Al finalizar, obtendrás una recomendación basada en tus respuestas.
+      </p>
+    </div>
+
+    <section class="section-wrapper" style="margin-top: 1.5rem;">
+      <div class="survey-card-transparent">
+        
+        <!-- PASO 1 A 4: PREGUNTAS DE LA ENCUESTA (6 ítems por pregunta en orden estricto) -->
+        <div id="surveyStepContainer">
+          
+          <!-- Pregunta 1 -->
+          <div class="survey-step" data-step="1">
+            <h4 class="survey-step-title">Pregunta 1 de 4</h4>
+            <p class="survey-question-text">¿Qué tan definidos están los requisitos del proyecto?</p>
+            <div class="survey-options">
+              <label class="radio-label"><input type="radio" name="p1" value="scrum" checked> Cambian frecuentemente con prioridades variables</label>
+              <label class="radio-label"><input type="radio" name="p1" value="cascada"> Están completamente definidos y no cambiarán</label>
+              <label class="radio-label"><input type="radio" name="p1" value="xp"> Son flexibles pero enfocados en excelencia técnica</label>
+              <label class="radio-label"><input type="radio" name="p1" value="kanban"> Evolucionan de forma continua según la demanda</label>
+              <label class="radio-label"><input type="radio" name="p1" value="modeloV"> Claramente especificados para validación rigurosa</label>
+              <label class="radio-label"><input type="radio" name="p1" value="iterativo"> Se refinan progresivamente en cada ciclo</label>
+            </div>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="survey-step" data-step="2" style="display: none;">
+            <h4 class="survey-step-title">Pregunta 2 de 4</h4>
+            <p class="survey-question-text">¿Cómo prefieres la planificación y entrega del software?</p>
+            <div class="survey-options">
+              <label class="radio-label"><input type="radio" name="p2" value="scrum" checked> Mediante ciclos o Sprints cortos y regulares</label>
+              <label class="radio-label"><input type="radio" name="p2" value="cascada"> En una única entrega final al concluir el proyecto</label>
+              <label class="radio-label"><input type="radio" name="p2" value="xp"> Entregas frecuentes con ciclos de prueba estrictos</label>
+              <label class="radio-label"><input type="radio" name="p2" value="kanban"> Flujo continuo de trabajo sin plazos de entrega fijos</label>
+              <label class="radio-label"><input type="radio" name="p2" value="modeloV"> Planificación secuencial con fases de prueba paralelas</label>
+              <label class="radio-label"><input type="radio" name="p2" value="iterativo"> Entregas incrementales por fases sucesivas</label>
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="survey-step" data-step="3" style="display: none;">
+            <h4 class="survey-step-title">Pregunta 3 de 4</h4>
+            <p class="survey-question-text">¿Cómo se organiza el equipo de trabajo?</p>
+            <div class="survey-options">
+              <label class="radio-label"><input type="radio" name="p3" value="scrum" checked> Con roles definidos y auto-organización por objetivos</label>
+              <label class="radio-label"><input type="radio" name="p3" value="cascada"> Mediante estructura jerárquica y fases estrictas</label>
+              <label class="radio-label"><input type="radio" name="p3" value="xp"> Parejas de trabajo colaborativo y programación conjunta</label>
+              <label class="radio-label"><input type="radio" name="p3" value="kanban"> Visualizando tareas y limitando el trabajo en curso</label>
+              <label class="radio-label"><input type="radio" name="p3" value="modeloV"> Con especialistas asignados a cada fase de control</label>
+              <label class="radio-label"><input type="radio" name="p3" value="iterativo"> Equipos multidisciplinarios enfocados en mejoras</label>
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="survey-step" data-step="4" style="display: none;">
+            <h4 class="survey-step-title">Pregunta 4 de 4</h4>
+            <p class="survey-question-text">¿Qué importancia tienen las prácticas técnicas y la calidad de código?</p>
+            <div class="survey-options">
+              <label class="radio-label"><input type="radio" name="p4" value="scrum" checked> Entregar valor constante adaptado al negocio</label>
+              <label class="radio-label"><input type="radio" name="p4" value="cascada"> Seguir la documentación formal y el plan inicial</label>
+              <label class="radio-label"><input type="radio" name="p4" value="xp"> Aplicar pruebas unitarias rigurosas y refactorización</label>
+              <label class="radio-label"><input type="radio" name="p4" value="kanban"> Optimizar la eficiencia operativa y eliminar cuellos de botella</label>
+              <label class="radio-label"><input type="radio" name="p4" value="modeloV"> Verificar y validar formalmente cada artefacto creado</label>
+              <label class="radio-label"><input type="radio" name="p4" value="iterativo"> Evaluar resultados parciales para evolucionar el diseño</label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botones de Navegación de la Encuesta -->
+        <div class="survey-nav-buttons" id="surveyNavButtons">
+          <button id="prevBtn" class="iso-btn" style="opacity: 0.5; pointer-events: none;">Anterior</button>
+          <button id="nextBtn" class="iso-btn active">Siguiente</button>
+        </div>
+
+        <!-- RESULTADOS DE LA ENCUESTA (Oculto inicialmente) -->
+        <div id="surveyResultContainer" style="display: none;">
+          <h3 style="text-align: center; color: var(--accent-lime); margin-bottom: 0.5rem; font-weight: 800;">Resultado de tu encuesta</h3>
+          <p style="text-align: center; font-size: 0.85rem; color: #d1ebd8; margin-bottom: 1.5rem;">Porcentaje de coincidencia basado en tus respuestas.</p>
+          
+          <div class="result-bars-wrapper" id="resultBarsList">
+            <!-- Se inyecta dinámicamente -->
+          </div>
+
+          <div class="interpretation-box" style="margin-top: 1.5rem; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-lime);">
+            <strong style="color: #fff; display: block; margin-bottom: 0.3rem;">Interpretación:</strong>
+            <p id="interpretationText" style="font-size: 0.9rem; color: #d1ebd8; margin: 0; line-height: 1.5;"></p>
+          </div>
+
+          <div style="text-align: center; margin-top: 1.5rem;">
+            <button id="restartSurveyBtn" class="iso-btn active">Volver a empezar</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <h2>SCRUM LAB</h2>
+    <p>Calidad del software, procesos de desarrollo y metodologías ágiles.</p>
+    <div class="epet-tag">
+      EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
+    </div>
+  </footer>
+
+  <script src="gestion.js"></script>
+  <script src="encuesta.js"></script>
+</body>
+</html>

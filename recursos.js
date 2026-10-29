@@ -75,24 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. LÓGICA DEL ACORDEÓN DE PREGUNTAS FRECUENTES (Cerradas por defecto, animación fluida)
-  const faqItems = document.querySelectorAll('.faq-item');
+  // 2. LÓGICA DEL ACORDEÓN DE PREGUNTAS FRECUENTES (DESPLEGABLE)
+  const faqDarkItems = document.querySelectorAll('.faq-dark-item');
 
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
+  faqDarkItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-dark-question');
+    const answer = item.querySelector('.faq-dark-answer');
 
     questionBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
       if (!isActive) {
         item.classList.add('active');
-        questionBtn.setAttribute('aria-expanded', 'true');
-        // Calcula la altura exacta para que la transición sea suave
         answer.style.maxHeight = answer.scrollHeight + 'px';
       } else {
         item.classList.remove('active');
-        questionBtn.setAttribute('aria-expanded', 'false');
         answer.style.maxHeight = null;
       }
     });

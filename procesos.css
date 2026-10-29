@@ -443,3 +443,28 @@ body, button, input, select, textarea { font-family: 'Plus Jakarta Sans', sans-s
 /* Identidad visual de los títulos según el diseño de referencia */
 .green-heading h2, .main-title-glow, .page-title { color: transparent !important; -webkit-text-stroke: 1px #388e3c; text-shadow: 0 0 10px rgba(56,142,60,.2); font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 800; letter-spacing: .035em; }
 .green-heading h2 { text-align: center; }
+/* Estilos para las preguntas desplegables del SDLC */
+.importance-box strong {
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.importance-box strong:hover {
+  color: #a2f282;
+}
+
+.importance-box p {
+  margin-top: 0.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(-4px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}

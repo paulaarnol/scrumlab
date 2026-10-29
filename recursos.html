@@ -59,7 +59,7 @@
         <ul>
           <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
           <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
-          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html#enlaces-de-interes"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
           <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
         </ul>
       </div>
@@ -73,7 +73,7 @@
 
         <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
         <ul>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
+          <li><a href="comparador.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
         </ul>
       </div>
     </div>
@@ -160,7 +160,7 @@
         </div>
       </section>
 
-<!-- LETRA B -->
+      <!-- LETRA B -->
       <section class="letter-section" id="section-B" data-letter="B">
         <div class="letter-badge">B</div>
         <div class="terms-grid">
@@ -676,130 +676,216 @@
         </div>
       </section>
 
-      <div class="no-results" id="noResults" style="display: none;">
-        <i class="fa-solid fa-file-circle-xmark"></i>
-        <p>No se encontraron términos que coincidan con la búsqueda.</p>
-      </div>
-
     </div>
 
-    <!-- MENSAJE DE SIN RESULTADOS (Oculto por defecto) -->
-    <div id="noResults" class="no-results" style="display: none;">
+    <!-- MENSAJE DE SIN RESULTADOS -->
+    <div class="no-results" id="noResults" style="display: none;">
       <i class="fa-solid fa-triangle-exclamation"></i>
       <h3>No se encontraron resultados</h3>
       <p>Intenta buscando con otro término o letra.</p>
     </div>
 
-    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
-<section class="section-wrapper" style="margin-top: 3.5rem;">
-  <div class="section-text-block green-heading" id="preguntas-frecuentes">
-    <h2>PREGUNTAS FRECUENTES</h2>
-  </div>
-
-  <div class="faq-main-card">
-    <p class="faq-intro">Encontrá respuestas a las dudas más comunes sobre la calidad y el desarrollo de software.</p>
-    
-    <div class="faq-list">
-      
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Qué es la calidad del software?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Es el grado en que un producto de software cumple los requisitos establecidos y satisface las necesidades de sus usuarios.</p>
-        </div>
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (DISEÑO OSCURO RESTABLECIDO) -->
+    <section class="section-wrapper" style="margin-top: 3.5rem;">
+      <div class="section-text-block green-heading" id="preguntas-frecuentes">
+        <h2>PREGUNTAS FRECUENTES</h2>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Por qué es importante realizar pruebas de software?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Permite detectar y corregir errores antes de que el sistema llegue a producción, garantizando un funcionamiento correcto y confiable.</p>
+      <div class="faq-dark-container">
+        <p class="faq-dark-intro">Encontrá respuestas a las dudas más comunes sobre la calidad y el desarrollo de software.</p>
+        
+        <div class="faq-dark-list">
+          
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Qué es la calidad del software?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Es el grado en que un producto de software cumple los requisitos establecidos y satisface las necesidades de sus usuarios.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Por qué es importante realizar pruebas de software?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Permite detectar y corregir errores antes de que el sistema llegue a producción, garantizando un funcionamiento correcto y confiable.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Cuál es la diferencia entre verificación y validación?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>La verificación comprueba si el software se construyó correctamente según las especificaciones, mientras que la validación comprueba si el sistema cumple con las necesidades reales del usuario.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Qué normas se utilizan para evaluar la calidad del software?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Se utilizan estándares internacionales como la familia de normas ISO/IEC 25000 (SQuaRE) y modelos de madurez como CMMI.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Qué es Scrum?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Es un marco de trabajo ágil que permite abordar proyectos complejos mediante ciclos cortos de trabajo llamados Sprints, fomentando la colaboración y entrega continua de valor.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Para qué sirve Kanban?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Es un método visual de gestión de flujo de trabajo que ayuda a optimizar las tareas, limitar el trabajo en progreso (WIP) y mejorar la eficiencia del equipo.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Qué es un caso de prueba?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Es un conjunto de condiciones, entradas y pasos diseñados para verificar si una funcionalidad específica del software opera de la manera esperada.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Qué es un bug?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Es un error, fallo o defecto en el código o diseño de un software que provoca un comportamiento inesperado o incorrecto en el sistema.</p>
+            </div>
+          </div>
+
+          <div class="faq-dark-item">
+            <button class="faq-dark-question">
+              <span>¿Qué diferencia hay entre los modelos tradicionales y las metodologías ágiles?</span>
+              <span class="faq-dark-arrow">v</span>
+            </button>
+            <div class="faq-dark-answer">
+              <p>Los modelos tradicionales planifican y estructuran todo el proyecto de forma rígida y secuencial desde el inicio, mientras que las metodologías ágiles son flexibles, iterativas y se adaptan constantemente a los cambios de requisitos.</p>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Cuál es la diferencia entre verificación y validación?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>La verificación comprueba si el software se construyó correctamente según las especificaciones, mientras que la validación comprueba si el sistema cumple con las necesidades reales del usuario.</p>
-        </div>
+    <!-- SECCIÓN DE ENLACES DE INTERÉS -->
+    <section class="section-wrapper" style="margin-top: 3.5rem;" id="enlaces-de-interes">
+      <div class="section-text-block green-heading">
+        <h2>ENLACES DE INTERÉS</h2>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Qué normas se utilizan para evaluar la calidad del software?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Se utilizan estándares internacionales como la familia de normas ISO/IEC 25000 (SQuaRE) y modelos de madurez como CMMI.</p>
+      <div class="resources-container">
+        
+        <!-- Tarjeta 1: Sitios Web -->
+        <div class="resource-card-box">
+          <div class="resource-card-header">
+            <i class="fa-solid fa-globe"></i>
+            <h3>SITIOS WEB</h3>
+          </div>
+          <div class="resource-card-body">
+            <div class="resource-item">
+              <h4>1. MANIFIESTO ÁGIL</h4>
+              <p>Explica los cuatro valores y los doce principios del desarrollo ágil de software. Es útil para las secciones de Scrum, Kanban y XP.</p>
+              <a href="https://www.atlassian.com/es/agile/manifesto" target="_blank" rel="noopener noreferrer">Visitar sitio web</a>
+            </div>
+            <div class="resource-item">
+              <h4>2. GLOSARIO ISTQB</h4>
+              <p>Permite consultar definiciones de términos relacionados con las pruebas de software, los defectos y el aseguramiento de la calidad.</p>
+              <a href="https://glossary.istqb.org/en_US/search?term=&exact_matches_first=true" target="_blank" rel="noopener noreferrer">Visitar sitio web</a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Qué es Scrum?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Es un marco de trabajo ágil que permite abordar proyectos complejos mediante ciclos cortos de trabajo llamados Sprints, fomentando la colaboración y entrega continua de valor.</p>
+        <!-- Tarjeta 2: Documentos PDF -->
+        <div class="resource-card-box">
+          <div class="resource-card-header">
+            <i class="fa-solid fa-file-pdf"></i>
+            <h3>DOCUMENTOS PDF</h3>
+          </div>
+          <div class="resource-card-body">
+            <div class="resource-item">
+              <h4>3. GUÍA OFICIAL DE SCRUM</h4>
+              <p>Documento en español que explica Scrum, sus responsabilidades, eventos, artefactos y reglas de funcionamiento.</p>
+              <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Spanish-Latin-South-American.pdf" target="_blank" rel="noopener noreferrer">Abrir documento PDF</a>
+            </div>
+            <div class="resource-item">
+              <h4>4. OWASP Web Security Testing Guide</h4>
+              <p>Guía técnica de pruebas de seguridad en aplicaciones web. Sirve para aprender a evaluar vulnerabilidades y controles de seguridad.</p>
+              <a href="https://owasp.org/projects/web-security-testing-guide" target="_blank" rel="noopener noreferrer">Consultar la guía y sus PDF</a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Para qué sirve Kanban?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Es un método visual de gestión de flujo de trabajo que ayuda a optimizar las tareas, limitar el trabajo en progreso (WIP) y mejorar la eficiencia del equipo.</p>
+        <!-- Tarjeta 3: Libros -->
+        <div class="resource-card-box">
+          <div class="resource-card-header">
+            <i class="fa-solid fa-book"></i>
+            <h3>LIBROS</h3>
+          </div>
+          <div class="resource-card-body">
+            <div class="resource-item">
+              <h4>5. SOFTWARE ENGINEERING</h4>
+              <p><strong>Autor:</strong> Ian Sommerville.<br>Libro que aborda los procesos de desarrollo, los requisitos, los modelos tradicionales, las metodologías ágiles y la construcción de sistemas confiables.</p>
+              <a href="https://www.buscalibre.com.ar/libro-software-engineering-10th-edition/9780133943030/p/46992747" target="_blank" rel="noopener noreferrer">Ver libro en Buscalibre</a>
+            </div>
+            <div class="resource-item">
+              <h4>6. SOFTWARE ENGINEERING: A PRACTITIONER'S APPROACH</h4>
+              <p><strong>Autores:</strong> Roger S. Pressman y Bruce R. Maxim.<br>Explica el proceso de ingeniería de software, la gestión de calidad, el aseguramiento de la calidad, las revisiones y las pruebas.</p>
+              <a href="https://www.buscalibre.com.ar/libro-ingenieria-del-software-un-enfoque-practico/9781456287726/p/53308771" target="_blank" rel="noopener noreferrer">Ver libro en Buscalibre</a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Qué es un caso de prueba?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Es un conjunto de condiciones, entradas y pasos diseñados para verificar si una funcionalidad específica del software opera de la manera esperada.</p>
+        <!-- Tarjeta 4: Organizaciones -->
+        <div class="resource-card-box">
+          <div class="resource-card-header">
+            <i class="fa-solid fa-users"></i>
+            <h3>ORGANIZACIONES</h3>
+          </div>
+          <div class="resource-card-body">
+            <div class="resource-item">
+              <h4>7. ISO — ORGANIZACIÓN INTERNACIONAL DE NORMALIZACIÓN</h4>
+              <p>Organización internacional que desarrolla normas para distintos sectores. Su familia ISO/IEC 25000 se relaciona específicamente con los requisitos y la evaluación de la calidad del software.</p>
+              <a href="https://www.iso.org/standard/64764.html" target="_blank" rel="noopener noreferrer">Visitar sitio oficial</a>
+            </div>
+            <div class="resource-item">
+              <h4>8. IEEE Computer Society</h4>
+              <p>Sociedad profesional dedicada a la informática y la ingeniería de software. Ofrece publicaciones y recursos sobre calidad, estándares, pruebas y buenas prácticas de desarrollo.</p>
+              <a href="https://www.computer.org/" target="_blank" rel="noopener noreferrer">Visitar sitio oficial</a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Qué es un bug?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Es un error, fallo o defecto en el código o diseño de un software que provoca un comportamiento inesperado o incorrecto en el sistema.</p>
-        </div>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>¿Qué diferencia hay entre los modelos tradicionales y las metodologías ágiles?</span>
-          <span class="faq-arrow">v</span>
-        </button>
-        <div class="faq-answer">
-          <p>Los modelos tradicionales planifican y estructuran todo el proyecto de forma rígida y secuencial desde el inicio, mientras que las metodologías ágiles son flexibles, iterativas y se adaptan constantemente a los cambios de requisitos.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
   </main>
 
   <footer class="footer-banner">
-    <h2>SISTEMAS DE GESTIÓN DE CALIDAD</h2>
-    <p>Un espacio para aprender sobre calidad del software, procesos de desarrollo y metodologías.</p>
+    <h2>SCRUM LAB</h2>
+    <p>Calidad del software, procesos de desarrollo y metodologías ágiles.</p>
     <div class="epet-tag">
       EPET 20 • TÉCNICO EN PROGRAMACIÓN • 2026
     </div>

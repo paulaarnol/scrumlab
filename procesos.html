@@ -59,25 +59,31 @@
         <ul>
           <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Glosario</a></li>
           <li><a href="recursos.html#preguntas-frecuentes"><i class="fa-solid fa-angle-right"></i> Preguntas Frecuentes</a></li>
-          <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
+          <li><a href="recursos.html#enlaces-de-interes"><i class="fa-solid fa-angle-right"></i> Enlaces de Interés</a></li>
           <li><a href="recursos.html"><i class="fa-solid fa-angle-right"></i> Ejercicios y Casos Prácticos</a></li>
         </ul>
       </div>
 
       <div class="menu-col">
+        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador de Metodologías</h3>
+        <ul>
+          <li><a href="comparador.html"><i class="fa-solid fa-angle-right"></i> Ir al Comparador</a></li>
+        </ul>
+
+        <h3><i class="fa-solid fa-square-poll-vertical"></i> Encuesta de Preferencias</h3>
+        <ul>
+          <li><a href="encuesta.html"><i class="fa-solid fa-angle-right"></i> Ir a la Encuesta</a></li>
+        </ul>
+
         <h3><i class="fa-solid fa-users"></i> Sobre Nosotros</h3>
         <ul>
           <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Información sobre el equipo</a></li>
           <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Contacto</a></li>
         </ul>
-
-        <h3><i class="fa-solid fa-scale-balanced"></i> Comparador</h3>
-        <ul>
-          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Comparador de Metodologías</a></li>
-        </ul>
       </div>
     </div>
   </div>
+
   <main class="page-container">
     <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
 
@@ -187,130 +193,131 @@
           <button class="iso-btn" data-model="iterativo">Modelo Iterativo e Incremental</button>
         </div>
 
-        <!-- Modelo Cascada Box -->
-        <div class="model-detail-card" id="model-cascada">
-          <h4 class="model-title">Modelo Cascada</h4>
-          <div class="model-block">
-            <h5 class="sub-heading">¿Qué es?</h5>
-            <p>Es un modelo en el que el desarrollo se organiza en etapas consecutivas. Cada etapa se completa antes de avanzar a la siguiente.</p>
-          </div>
-          <div class="pros-cons-grid">
-            <div class="pros-box">
-              <h6>Ventajas:</h6>
-              <ul>
-                <li>Es sencillo de comprender y organizar.</li>
-                <li>Permite planificar las etapas desde el comienzo.</li>
-                <li>Cada etapa tiene objetivos claramente definidos.</li>
-                <li>Facilita la documentación del proyecto.</li>
-              </ul>
+        <!-- Modelo Cascada (Información + Imagen unificada) -->
+        <div class="model-full-block" id="block-cascada">
+          <div class="model-detail-card">
+            <h4 class="model-title">Modelo Cascada</h4>
+            <div class="model-block">
+              <h5 class="sub-heading">¿Qué es?</h5>
+              <p>Es un modelo en el que el desarrollo se organiza en etapas consecutivas. Cada etapa se completa antes de avanzar a la siguiente.</p>
             </div>
-            <div class="cons-box">
-              <h6>Desventajas:</h6>
-              <ul>
-                <li>Es difícil volver a etapas anteriores una vez avanzadas.</li>
-                <li>Los cambios pueden resultar costosos.</li>
-                <li>Los errores pueden descubrirse recién en etapas posteriores.</li>
-                <li>No es adecuado cuando los requisitos cambian frecuentemente.</li>
-              </ul>
+            <div class="pros-cons-grid">
+              <div class="pros-box">
+                <h6>Ventajas:</h6>
+                <ul>
+                  <li>Es sencillo de comprender y organizar.</li>
+                  <li>Permite planificar las etapas desde el comienzo.</li>
+                  <li>Cada etapa tiene objetivos claramente definidos.</li>
+                  <li>Facilita la documentación del proyecto.</li>
+                </ul>
+              </div>
+              <div class="cons-box">
+                <h6>Desventajas:</h6>
+                <ul>
+                  <li>Es difícil volver a etapas anteriores una vez avanzadas.</li>
+                  <li>Los cambios pueden resultar costosos.</li>
+                  <li>Los errores pueden descubrirse recién en etapas posteriores.</li>
+                  <li>No es adecuado cuando los requisitos cambian frecuentemente.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="model-block">
-            <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
-            <p>Es conveniente cuando los requisitos están bien definidos desde el inicio y se espera que sufran pocos cambios durante el desarrollo.</p>
+            <div class="model-block">
+              <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
+              <p>Es conveniente cuando los requisitos están bien definidos desde el inicio y se espera que sufran pocos cambios durante el desarrollo.</p>
+            </div>
+
+            <!-- Ilustración Integrada -->
+            <div class="diagram-illustration-card image-diagram-card" style="margin-top: 1.5rem; margin-bottom: 0;">
+              <h4 class="diagram-title">Modelo Cascada</h4>
+              <img src="imagenes/modelo-cascada.png" alt="Ilustración del modelo en cascada" class="process-diagram-image">
+              <p class="diagram-caption">El desarrollo avanza secuencialmente de una etapa a la siguiente.</p>
+            </div>
           </div>
         </div>
 
-        <!-- Modelo en V Box -->
-        <div class="model-detail-card" id="model-v" style="display: none;">
-          <h4 class="model-title">Modelo en V</h4>
-          <div class="model-block">
-            <h5 class="sub-heading">¿Qué es?</h5>
-            <p>Es un modelo basado en etapas secuenciales que relaciona cada fase de desarrollo con una etapa específica de pruebas y validación.</p>
-          </div>
-          <div class="pros-cons-grid">
-            <div class="pros-box">
-              <h6>Ventajas:</h6>
-              <ul>
-                <li>Da importancia a las pruebas desde las primeras etapas.</li>
-                <li>Facilita la planificación y organización.</li>
-                <li>Permite relacionar cada etapa con su correspondiente validación.</li>
-                <li>Favorece la detección temprana de errores.</li>
-              </ul>
+        <!-- Modelo en V (Información + Imagen unificada) -->
+        <div class="model-full-block" id="block-v" style="display: none;">
+          <div class="model-detail-card">
+            <h4 class="model-title">Modelo en V</h4>
+            <div class="model-block">
+              <h5 class="sub-heading">¿Qué es?</h5>
+              <p>Es un modelo basado en etapas secuenciales que relaciona cada fase de desarrollo con una etapa específica de pruebas y validación.</p>
             </div>
-            <div class="cons-box">
-              <h6>Desventajas:</h6>
-              <ul>
-                <li>Es poco flexible frente a cambios en los requisitos.</li>
-                <li>Los cambios pueden ser costosos.</li>
-                <li>Requiere que los requisitos estén bastante definidos desde el comienzo.</li>
-              </ul>
+            <div class="pros-cons-grid">
+              <div class="pros-box">
+                <h6>Ventajas:</h6>
+                <ul>
+                  <li>Da importancia a las pruebas desde las primeras etapas.</li>
+                  <li>Facilita la planificación y organización.</li>
+                  <li>Permite relacionar cada etapa con su correspondiente validación.</li>
+                  <li>Favorece la detección temprana de errores.</li>
+                </ul>
+              </div>
+              <div class="cons-box">
+                <h6>Desventajas:</h6>
+                <ul>
+                  <li>Es poco flexible frente a cambios en los requisitos.</li>
+                  <li>Los cambios pueden ser costosos.</li>
+                  <li>Requiere que los requisitos estén bastante definidos desde el comienzo.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="model-block">
-            <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
-            <p>Es útil cuando los requisitos son claros y se necesita un proceso organizado, con fuerte control y planificación de las pruebas.</p>
+            <div class="model-block">
+              <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
+              <p>Es útil cuando los requisitos son claros y se necesita un proceso organizado, con fuerte control y planificación de las pruebas.</p>
+            </div>
+
+            <!-- Ilustración Integrada -->
+            <div class="diagram-illustration-card image-diagram-card" style="margin-top: 1.5rem; margin-bottom: 0;">
+              <h4 class="diagram-title">Modelo en V</h4>
+              <img src="imagenes/modelo-v.png" alt="Ilustración del modelo en V con etapas de desarrollo y validación" class="process-diagram-image">
+              <p class="diagram-caption">Cada etapa de desarrollo se relaciona con actividades de verificación y validación.</p>
+            </div>
           </div>
         </div>
 
-        <!-- Modelo Iterativo e Incremental Box -->
-        <div class="model-detail-card" id="model-iterativo" style="display: none;">
-          <h4 class="model-title">Modelo Iterativo e Incremental</h4>
-          <div class="model-block">
-            <h5 class="sub-heading">¿Qué es?</h5>
-            <p>El software se desarrolla en diferentes ciclos o iteraciones. En cada una se construye y mejora una parte del sistema hasta obtener el producto completo.</p>
-          </div>
-          <div class="pros-cons-grid">
-            <div class="pros-box">
-              <h6>Ventajas:</h6>
-              <ul>
-                <li>Permite obtener versiones funcionales progresivamente.</li>
-                <li>Facilita incorporar cambios y mejoras.</li>
-                <li>Los usuarios pueden recibir resultados antes de finalizar todo el proyecto.</li>
-                <li>Permite detectar problemas durante las diferentes iteraciones.</li>
-              </ul>
+        <!-- Modelo Iterativo e Incremental (Información + Imagen unificada) -->
+        <div class="model-full-block" id="block-iterativo" style="display: none;">
+          <div class="model-detail-card">
+            <h4 class="model-title">Modelo Iterativo e Incremental</h4>
+            <div class="model-block">
+              <h5 class="sub-heading">¿Qué es?</h5>
+              <p>El software se desarrolla en diferentes ciclos o iteraciones. En cada una se construye y mejora una parte del sistema hasta obtener el producto completo.</p>
             </div>
-            <div class="cons-box">
-              <h6>Desventajas:</h6>
-              <ul>
-                <li>Requiere una buena planificación de cada iteración.</li>
-                <li>Puede aumentar la complejidad de la gestión del proyecto.</li>
-                <li>Las modificaciones constantes pueden afectar la organización del desarrollo.</li>
-              </ul>
+            <div class="pros-cons-grid">
+              <div class="pros-box">
+                <h6>Ventajas:</h6>
+                <ul>
+                  <li>Permite obtener versiones funcionales progresivamente.</li>
+                  <li>Facilita incorporar cambios y mejoras.</li>
+                  <li>Los usuarios pueden recibir resultados antes de finalizar todo el proyecto.</li>
+                  <li>Permite detectar problemas durante las diferentes iteraciones.</li>
+                </ul>
+              </div>
+              <div class="cons-box">
+                <h6>Desventajas:</h6>
+                <ul>
+                  <li>Requiere una buena planificación de cada iteración.</li>
+                  <li>Puede aumentar la complejidad de la gestión del proyecto.</li>
+                  <li>Las modificaciones constantes pueden afectar la organización del desarrollo.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="model-block">
-            <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
-            <p>Es adecuado cuando se necesita desarrollar el sistema progresivamente y existe la posibilidad de incorporar cambios o nuevos requisitos durante el proyecto.</p>
+            <div class="model-block">
+              <h5 class="sub-heading">¿Cuando es ideal utilizarlo?</h5>
+              <p>Es adecuado cuando se necesita desarrollar el sistema progresivamente y existe la posibilidad de incorporar cambios o nuevos requisitos durante el proyecto.</p>
+            </div>
+
+            <!-- Ilustración Integrada -->
+            <div class="diagram-illustration-card image-diagram-card" style="margin-top: 1.5rem; margin-bottom: 0;">
+              <h4 class="diagram-title">Modelo Iterativo e Incremental</h4>
+              <img src="imagenes/modelo-iterativo-incremental.png" alt="Ilustración del modelo iterativo e incremental" class="process-diagram-image">
+              <p class="diagram-caption">El software se construye progresivamente mediante iteraciones e incrementos.</p>
+            </div>
           </div>
         </div>
 
       </div>
-    </section>
-
-    <!-- ILUSTRACIONES DE MODELOS TRADICIONALES (ANCLAJE EXACTO PARA EL MENÚ) -->
-    <div class="section-text-block green-heading" id="ilustraciones-tradicionales">
-      <h2>Ilustraciones de Modelos Tradicionales</h2>
-    </div>
-
-    <section class="section-wrapper">
-      
-      <!-- Las imágenes se pueden reemplazar/subir con estos nombres dentro de /imagenes -->
-      <div class="light-card diagram-illustration-card image-diagram-card">
-        <h4 class="diagram-title">Modelo Cascada</h4>
-        <img src="imagenes/modelo-cascada.png" alt="Ilustración del modelo en cascada" class="process-diagram-image">
-        <p class="diagram-caption">El desarrollo avanza secuencialmente de una etapa a la siguiente.</p>
-      </div>
-      <div class="light-card diagram-illustration-card image-diagram-card">
-        <h4 class="diagram-title">Modelo en V</h4>
-        <img src="imagenes/modelo-v.png" alt="Ilustración del modelo en V con etapas de desarrollo y validación" class="process-diagram-image">
-        <p class="diagram-caption">Cada etapa de desarrollo se relaciona con actividades de verificación y validación.</p>
-      </div>
-      <div class="light-card diagram-illustration-card image-diagram-card">
-        <h4 class="diagram-title">Modelo iterativo e incremental</h4>
-        <img src="imagenes/modelo-iterativo-incremental.png" alt="Ilustración del modelo iterativo e incremental" class="process-diagram-image">
-        <p class="diagram-caption">El software se construye progresivamente mediante iteraciones e incrementos.</p>
-      </div>
-
     </section>
 
   </main>
